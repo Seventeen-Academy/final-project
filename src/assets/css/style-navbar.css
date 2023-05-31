@@ -1,0 +1,37 @@
+ul .active {
+    color: #3E37A9;
+}
+
+.navlink {
+    color: #252525;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.navlink:hover {
+    color: #3E37A9;
+}
+
+.btn.btn.btn-signup a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.btn.btn-signup:hover {
+    background-color: #6e67cf;
+    color: #FFFFFF;
+}
+
+.btn-wrapper-none {
+    display: none !important;
+}
+
+.btn-wrapper-2 .btn-profile a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.btn.btn-profile:hover {
+    background-color: #6e67cf;
+    color: #FFFFFF;
+}
