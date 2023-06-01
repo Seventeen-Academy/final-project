@@ -164,9 +164,12 @@
     font-family: 'PoppinsLight';
 }
 
-.class .css-card {
-    background-color: #3D9EC8;
+.class .card-thumbnail {
+    object-fit: contain;
+    overflow: hidden;
+    height: 247px;
 }
+
 
 .class .border-card {
     border-top-left-radius: 12px;
@@ -175,13 +178,6 @@
     border-bottom-right-radius: 0;
 }
 
-.class .html-card {
-    background-color: #F16F37;
-}
-
-.class .js-card {
-    background-color: #F1DF4B;
-}
 
 .class .card-body {
     border-bottom-left-radius: 12px;

@@ -14,6 +14,8 @@ import ReportChara from "./report-chara.png";
 import CSSThumbnail from "./css-card.png";
 import JSThumbnail from "./js-card.png";
 import HTMLThumbnail from "./html-card.png";
+import GithubThumbnail from "./github-card.png";
+import PHPThumbnail from "./php-card.png";
 import BGLoginRegister from "./bg-login-register.png";
 
 export {
@@ -32,5 +34,7 @@ export {
   CSSThumbnail,
   JSThumbnail,
   HTMLThumbnail,
+  GithubThumbnail,
+  PHPThumbnail,
   BGLoginRegister,
 };

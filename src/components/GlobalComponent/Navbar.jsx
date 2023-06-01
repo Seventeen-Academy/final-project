@@ -1,11 +1,5 @@
-import { Link, NavLink, Route, Routes } from "react-router-dom";
-import About from "../../pages/About";
-import Article from "../../pages/Article";
-import Course from "../../pages/Course";
-import LandingPage from "../../pages/LandingPage";
+import { Link, NavLink } from "react-router-dom";
 import "../../assets/css/style-navbar.css";
-import Login from "../../pages/Login";
-import Register from "../../pages/Register";
 
 const Navbar = () => {
   return (
@@ -92,15 +86,6 @@ const Navbar = () => {
           </nav>
         </header>
       </div>
-
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/course" element={<Course />} />
-        <Route path="/article" element={<Article />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/sign-in" element={<Login />} />
-        <Route path="/sign-up" element={<Register />} />
-      </Routes>
     </>
   );
 };

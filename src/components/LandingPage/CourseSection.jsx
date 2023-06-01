@@ -18,8 +18,8 @@ const CourseSection = () => {
             <div className="row">
               <div className="col-md-4 mt-3">
                 <div className="card-wrapper">
-                  <div className="card css-card border-card shadow-sm d-flex justify-content-center align-items-center p-md-5">
-                    <img src={CSSThumbnail} alt="" width="140" />
+                  <div className="card card-thumbnail css-card border-card shadow-sm d-flex justify-content-center align-items-center">
+                    <img src={CSSThumbnail} alt="" />
                   </div>
                   <div className="card-body p-2 shadow-sm bgr-light px-2">
                     <h4 className="title-1 mx-2 color-dark">CSS Dasar</h4>
@@ -58,8 +58,8 @@ const CourseSection = () => {
 
               <div className="col-md-4 mt-3">
                 <div className="card-wrapper">
-                  <div className="card html-card border-card shadow-sm d-flex justify-content-center align-items-center p-md-5">
-                    <img src={HTMLThumbnail} alt="" width="140" />
+                  <div className="card card-thumbnail border-card shadow-sm d-flex justify-content-center align-items-center">
+                    <img src={HTMLThumbnail} alt="" />
                   </div>
                   <div className="card-body p-2 shadow-sm bgr-light px-2">
                     <h4 className="title-1 mx-2 color-dark">HTML Dasar</h4>
@@ -98,8 +98,8 @@ const CourseSection = () => {
 
               <div className="col-md-4 mt-3">
                 <div className="card-wrapper">
-                  <div className="card js-card border-card shadow-sm d-flex justify-content-center align-items-center p-md-5">
-                    <img src={JSThumbnail} alt="" width="140" />
+                  <div className="card card-thumbnail border-card shadow-sm d-flex justify-content-center align-items-center">
+                    <img src={JSThumbnail} alt="" />
                   </div>
                   <div className="card-body p-2 shadow-sm bgr-light px-2">
                     <h4 className="title-1 mx-2 color-dark">

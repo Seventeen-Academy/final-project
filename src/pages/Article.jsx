@@ -1,7 +1,12 @@
+import Navbar from "../components/GlobalComponent/Navbar";
+
 const Article = () => {
   return (
     <>
-      <h1>Artikel</h1>
+      <div>
+        <Navbar />
+        <h1>Artikel</h1>
+      </div>
     </>
   );
 };

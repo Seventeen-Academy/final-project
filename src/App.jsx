@@ -4,13 +4,13 @@ import "./assets/plugins/bootstrap/js/bootstrap.js";
 import "./assets/css/style-footer.css";
 import "./assets/css/core.css";
 import "./assets/css/responsive.css";
-import Navbar from "./components/GlobalComponent/Navbar";
+import Router from "./config/router";
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Navbar />
+        <Router />
       </BrowserRouter>
     </>
   );

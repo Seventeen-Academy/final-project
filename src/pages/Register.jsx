@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../assets/css/style-register.css";
 import { LockIcon, MailIcon, PersonIcon } from "../assets/icons";
 import { BGLoginRegister } from "../assets/images";
@@ -113,9 +114,9 @@ const Register = () => {
               <div className="row">
                 <div className="col mt-3 register d-flex justify-content-center">
                   <span className="register-label">Sudah punya akun?</span>
-                  <a href="../pages/login.html" className="register-link ms-2">
+                  <Link to="/sign-in" className="register-link ms-2">
                     Masuk Sekarang
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

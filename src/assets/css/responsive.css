@@ -67,6 +67,10 @@
         font-size: 11px;
     }
 
+    .class .left-twig {
+        display: none;
+    }
+
     footer .footer-list {
         margin-top: 12px;
         margin-bottom: 12px;

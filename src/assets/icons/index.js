@@ -1,4 +1,5 @@
 import BadgeJunior from "./badge-junior.svg";
+import BadgeSenior from "./badge-senior.svg";
 import BookIcon from "./book.svg";
 import GithubIcon from "./github.svg";
 import InstagramIcon from "./instagram.svg";
@@ -11,6 +12,7 @@ import PersonIcon from "./person.svg";
 
 export {
   BadgeJunior,
+  BadgeSenior,
   BookIcon,
   GithubIcon,
   InstagramIcon,
