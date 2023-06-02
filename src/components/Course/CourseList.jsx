@@ -7,6 +7,7 @@ import {
 } from "../../assets/images";
 import { BadgeJunior, BadgeSenior, BookIcon } from "../../assets/icons";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const CourseList = () => {
   const [course, useCourse] = useState([
@@ -108,9 +109,15 @@ const CourseList = () => {
                   </div>
                   <div className="card-footer px-2 bgr-light mb-2">
                     <hr />
-                    <button className="btn bgr-alternative btn-class color-light">
+                    {/* <button className="btn bgr-alternative btn-class color-light">
                       Selengkapnya
-                    </button>
+                    </button> */}
+                    <Link
+                      to="/payment"
+                      className="btn bgr-alternative btn-class color-light"
+                    >
+                      Selengkapnya
+                    </Link>
                   </div>
                 </div>
               </div>

@@ -6,6 +6,7 @@ import Course from "../../pages/Course";
 import About from "../../pages/About";
 import Article from "../../pages/Article";
 import Login from "../../pages/Login";
+import Payment from "../../pages/Payment";
 
 const Router = () => {
   return (
@@ -17,6 +18,7 @@ const Router = () => {
         <Route path="/about" element={<About />} />
         <Route path="/sign-in" element={<Login />} />
         <Route path="/sign-up" element={<Register />} />
+        <Route path="/payment" element={<Payment />} />
       </Routes>
     </>
   );

@@ -17,6 +17,10 @@ import HTMLThumbnail from "./html-card.png";
 import GithubThumbnail from "./github-card.png";
 import PHPThumbnail from "./php-card.png";
 import BGLoginRegister from "./bg-login-register.png";
+import HTMLPayment from "./html-payment.png";
+import DanaPayment from "./payment-dana.png";
+import GopayPayment from "./payment-gopay.png";
+import OVOPayment from "./payment-ovo.png";
 
 export {
   BukuAgama,
@@ -37,4 +41,8 @@ export {
   GithubThumbnail,
   PHPThumbnail,
   BGLoginRegister,
+  HTMLPayment,
+  DanaPayment,
+  GopayPayment,
+  OVOPayment,
 };

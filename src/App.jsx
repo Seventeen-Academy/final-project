@@ -5,6 +5,7 @@ import "./assets/css/style-footer.css";
 import "./assets/css/core.css";
 import "./assets/css/responsive.css";
 import Router from "./config/router";
+import Payment from "./pages/Payment";
 
 function App() {
   return (

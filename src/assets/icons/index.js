@@ -9,6 +9,10 @@ import MailIcon from "./mail.svg";
 import LogoWhiteIcon from "./logo-white.svg";
 import LockIcon from "./lock.svg";
 import PersonIcon from "./person.svg";
+import PaymentSeva from "./payment-seva-cash.svg";
+import PaymentBank from "./payment-bank.svg";
+import PaymentNonBank from "./payment-nonbank.svg";
+import PaymentEwallet from "./payment-ewallet.svg";
 
 export {
   BadgeJunior,
@@ -22,4 +26,8 @@ export {
   LogoWhiteIcon,
   LockIcon,
   PersonIcon,
+  PaymentBank,
+  PaymentEwallet,
+  PaymentNonBank,
+  PaymentSeva,
 };
