@@ -29,6 +29,11 @@
     src: url('../fonts/Poppins-Italic.ttf');
 }
 
+@font-face {
+    font-family: 'PoppinsSemiBold';
+    src: url('..//fonts/Poppins-SemiBold.ttf');
+}
+
 .poppins {
     font-family: 'Poppins';
 }
@@ -51,6 +56,10 @@
 
 .poppins-italic {
     font-family: 'PoppinsItalic';
+}
+
+.poppins-semiBold {
+    font-family: 'PoppinsSemiBold';
 }
 
 /* Color */

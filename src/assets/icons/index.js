@@ -13,7 +13,8 @@ import PaymentSeva from "./payment-seva-cash.svg";
 import PaymentBank from "./payment-bank.svg";
 import PaymentNonBank from "./payment-nonbank.svg";
 import PaymentEwallet from "./payment-ewallet.svg";
-
+import SettingIcon from "./setting.svg";
+ 
 export {
   BadgeJunior,
   BadgeSenior,
@@ -30,4 +31,5 @@ export {
   PaymentEwallet,
   PaymentNonBank,
   PaymentSeva,
+  SettingIcon,
 };

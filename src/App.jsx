@@ -4,6 +4,7 @@ import "./assets/plugins/bootstrap/js/bootstrap.js";
 import "./assets/css/style-footer.css";
 import "./assets/css/core.css";
 import "./assets/css/responsive.css";
+// import Profile from "./pages/Profile";
 import Router from "./config/router";
 import Payment from "./pages/Payment";
 
@@ -13,6 +14,7 @@ function App() {
       <BrowserRouter>
         <Router />
       </BrowserRouter>
+      {/* <Profile /> */}
     </>
   );
 }

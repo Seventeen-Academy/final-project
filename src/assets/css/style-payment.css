@@ -17,10 +17,6 @@
     background-color: #FFFFFF;
 }
 
-/* .payment-method-wrapper .btn-payment-method:active .btn-payment-method:focus{
-    border: 1px solid #252525;
-} */
-
 .payment-method-wrapper .payment-method-header {
     font-family: 'Poppins';
     font-size: 16px;

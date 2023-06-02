@@ -21,6 +21,11 @@ import HTMLPayment from "./html-payment.png";
 import DanaPayment from "./payment-dana.png";
 import GopayPayment from "./payment-gopay.png";
 import OVOPayment from "./payment-ovo.png";
+import BGProfile from "./bg-profile.png";
+import Avatar from "./profile-avatar.png";
+import BGLevel from "./bg-level.png";
+import JuniorLevel from "./level-junior.png";
+import SeniorLevel from "./level-senior.png";
 
 export {
   BukuAgama,
@@ -45,4 +50,9 @@ export {
   DanaPayment,
   GopayPayment,
   OVOPayment,
+  BGProfile,
+  Avatar,
+  BGLevel,
+  JuniorLevel,
+  SeniorLevel,
 };
