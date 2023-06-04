@@ -26,6 +26,12 @@ import Avatar from "./profile-avatar.png";
 import BGLevel from "./bg-level.png";
 import JuniorLevel from "./level-junior.png";
 import SeniorLevel from "./level-senior.png";
+import ThumbnailBakat1 from "./artikel-bakat1.jpg";
+import ThumbnailKeterampilan1 from "./artikel-keterampilan1.jpg";
+import ThumbnailPendidikan1 from "./artikel-pendidikan1.jpg";
+import ThumbnailPendidikan2 from "./artikel-pendidikan2.jpg";
+import ThumbnailPerlindungan1 from "./artikel-perlindungan1.jpg";
+import ThumbnailPerlindungan2 from "./artikel-perlindungan2.jpg";
 
 export {
   BukuAgama,
@@ -55,4 +61,10 @@ export {
   BGLevel,
   JuniorLevel,
   SeniorLevel,
+  ThumbnailBakat1,
+  ThumbnailKeterampilan1,
+  ThumbnailPendidikan1,
+  ThumbnailPendidikan2,
+  ThumbnailPerlindungan1,
+  ThumbnailPerlindungan2,
 };

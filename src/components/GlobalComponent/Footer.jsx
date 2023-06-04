@@ -1,9 +1,4 @@
-import {
-  GithubIcon,
-  InstagramIcon,
-  LogoWhiteIcon,
-  YoutubeIcon,
-} from "../../assets/icons";
+import { GithubIcon, InstagramIcon, LogoWhiteIcon, YoutubeIcon } from "../../assets/icons";
 
 const Footer = () => {
   return (
@@ -21,7 +16,7 @@ const Footer = () => {
             <div className="col-md-2 col footer-list">
               <strong>Layanan Kami</strong>
               <ul>
-                <li>Tentanng Kami</li>
+                <li>Tentang Kami</li>
                 <li>Privacy & Policy</li>
                 <li>Kontak Kami</li>
               </ul>
@@ -66,9 +61,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="row">
-              <span className="copyright">
-                Copyright © 2023 SEVA ALL RIGHT RESERVED
-              </span>
+              <span className="copyright">Copyright © 2023 SEVA ALL RIGHT RESERVED</span>
             </div>
           </div>
         </div>
