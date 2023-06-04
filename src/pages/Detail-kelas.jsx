@@ -109,8 +109,8 @@ function Kelas() {
                     <FaUserCircle />
                   </div>
                   <div style={{ fontSize: "0.8rem" }}>
-                    <div>Bricho Alkalas Savaro</div>
-                    <div>Mentor</div>
+                    <div>Enricho Alkalas Savaro</div>
+                    <div>Mentor Skilvul</div>
                   </div>
                 </div>
               </div>
