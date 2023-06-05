@@ -1,5 +1,11 @@
 const DetailArticle = () => {
-  return <></>;
+  return (
+    <>
+      <div>
+        <h1>Detail Article</h1>
+      </div>
+    </>
+  );
 };
 
 export default DetailArticle;

@@ -9,6 +9,7 @@ import Login from "../../pages/Login";
 import Payment from "../../pages/Payment";
 import Form from "../../pages/Form";
 import DetailKelas from "../../pages/DetailKelas";
+import DetailArticle from "../../pages/DetailArticle";
 
 const Router = () => {
   return (
@@ -23,6 +24,7 @@ const Router = () => {
         <Route path="/payment" element={<Payment />} />
         <Route path="/form" element={<Form />} />
         <Route path="/detailkelas" element={<DetailKelas />} />
+        <Route path="/article/detailarticle" element={<DetailArticle />} />
       </Routes>
     </>
   );

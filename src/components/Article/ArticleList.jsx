@@ -56,28 +56,28 @@ const ArticleList = () => {
         <div className="row g-3">
           {article.map((item, index) => (
             <div className="col-12 col-md-6 col-lg-4" key={index}>
-              <Link to="/DetailArticle"></Link>
-
-              <div className="card card-article">
-                <img src={item.thumbnail} alt="" />
-                <div className="card-body">
-                  <div className="row">
-                    <div className="col-6">
-                      <div className="kategori-wrapper d-flex ms-1">
-                        <img src={item.badgeStatus} className="img-fluid" />
+              <Link to="/article/detailarticle">
+                <div className="card card-article">
+                  <img src={item.thumbnail} alt="" />
+                  <div className="card-body">
+                    <div className="row">
+                      <div className="col-6">
+                        <div className="kategori-wrapper d-flex ms-1">
+                          <img src={item.badgeStatus} className="img-fluid" />
+                        </div>
+                      </div>
+                      <div className="col-6 d-flex justify-content-end">
+                        <span className="date me-1 my-auto">{item.date}</span>
                       </div>
                     </div>
-                    <div className="col-6 d-flex justify-content-end">
-                      <span className="date me-1 my-auto">{item.date}</span>
-                    </div>
+                    <h5 className="card-titleArticle pt-3 mx-1 color-dark">
+                      {item.title}
+                      {/* <a href="/pages/detail-artikel.html" className="view color-dark"></a> */}
+                    </h5>
+                    <p className="card-text mx-1 color-dark my-3">{item.description}</p>
                   </div>
-                  <h5 className="card-titleArticle pt-3 mx-1 color-dark">
-                    {item.title}
-                    {/* <a href="/pages/detail-artikel.html" className="view color-dark"></a> */}
-                  </h5>
-                  <p className="card-text mx-1 color-dark my-3">{item.description}</p>
                 </div>
-              </div>
+              </Link>
             </div>
           ))}
         </div>
