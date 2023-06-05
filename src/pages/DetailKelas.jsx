@@ -1,4 +1,5 @@
 import React from "react";
+import "../assets/css/style-detailkelas.css";
 import { AiFillStar } from "react-icons/ai";
 import { BiBookAdd } from "react-icons/bi";
 import { LuAlarmClock } from "react-icons/lu";
@@ -6,6 +7,9 @@ import { TiPointOfInterestOutline } from "react-icons/ti";
 import { TbCertificate } from "react-icons/tb";
 import { FaUserCircle } from "react-icons/fa";
 import { MdOutlineClass } from "react-icons/md";
+import Footer from "../components/GlobalComponent/Footer";
+import Navbar from "../components/GlobalComponent/Navbar";
+import { Link } from "react-router-dom";
 const dataDetailKelas = [
   {
     title: "Terakhir Diupdate",
@@ -24,9 +28,10 @@ const dataDetailKelas = [
 function DetailKelas() {
   return (
     <main className="bg-grey pt-4">
+      <Navbar />
       <div className="container">
         <div className="row">
-          <div className="col col-sm-12  col-lg-6">
+          <div className="col col-sm-12  col-lg-8">
             <div className="container border border-white rounded bg-white p-4 my-2">
               <div className="container fw-bold fs-3">HTML Dasar</div>
               <div className="container">
@@ -53,7 +58,7 @@ function DetailKelas() {
               </div>
               <div className="container">
                 <div className="row">
-                  {dataKelas.map((a, index) => (
+                  {dataDetailKelas .map((a, index) => (
                     <div lg={3} className="col col-lg-3 py-2" key={index}>
                       <div className="container data-kelas-wrapper rounded py-1">
                         <div>{a.title}</div>
@@ -72,13 +77,13 @@ function DetailKelas() {
               </div>
             </div>
           </div>
-          <div className="col col-sm-12 col-lg-6">
+          <div className="col col-sm-12 col-lg-4">
             <div className="container border border-white rounded bg-white p-4 my-2">
               <div className="fw-bold">Rp. 500.000,-</div>
-              <div style={{ color: "#7b069c" }}>Gratis</div>
-              <button className="button rounded text-white btn-dftr">
+              <div style={{ color: "#7b069c" } }className="mb-3">Gratis</div>
+              <Link to="/payment" className="button rounded text-white btn-dftr px-3 py-2">
                 Daftar Kelas
-              </button>
+              </Link>
               <hr />
               <div className="fw-bold">Detail Kelas</div>
               <div style={{ fontSize: "0.8rem" }}>
@@ -131,7 +136,7 @@ function DetailKelas() {
           </div>
         </div>
         <div className="row">
-          <div className="col col-xs-12  col-lg-6">
+          <div className="col col-xs-12  col-lg-8">
             <div className="container border border-white rounded bg-white p-4 my-2">
               <div className="fw-bold fs-3">Ringkasan</div>
               <br />
@@ -197,6 +202,8 @@ function DetailKelas() {
           </div>
         </div>
       </div>
+      
+      <Footer />
     </main>
   );
 }

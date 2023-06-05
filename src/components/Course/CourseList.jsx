@@ -113,7 +113,7 @@ const CourseList = () => {
                       Selengkapnya
                     </button> */}
                     <Link
-                      to="/payment"
+                      to="/detailkelas"
                       className="btn bgr-alternative btn-class color-light"
                     >
                       Selengkapnya

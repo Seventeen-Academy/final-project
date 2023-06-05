@@ -33,6 +33,7 @@ import ThumbnailPendidikan2 from "./artikel-pendidikan2.jpg";
 import ThumbnailPerlindungan1 from "./artikel-perlindungan1.jpg";
 import ThumbnailPerlindungan2 from "./artikel-perlindungan2.jpg";
 import BadgePendidikan from "./badge-pendidikan.png";
+import ThumbnailDetailKelas from "./detail-kelas.png";
 
 export {
   BukuAgama,
@@ -69,4 +70,5 @@ export {
   ThumbnailPerlindungan1,
   ThumbnailPerlindungan2,
   BadgePendidikan,
+  ThumbnailDetailKelas,
 };
