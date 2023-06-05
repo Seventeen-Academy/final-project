@@ -1,4 +1,4 @@
-import { ThumbnailBakat1, ThumbnailKeterampilan1, ThumbnailPendidikan1, ThumbnailPendidikan2, ThumbnailPerlindungan1, ThumbnailPerlindungan2, BadgePendidikan } from "../../assets/images";
+import { ThumbnailBakat1, ThumbnailKeterampilan1, ThumbnailPendidikan1, ThumbnailPendidikan2, ThumbnailPerlindungan1, ThumbnailPerlindungan2, BadgePendidikan, BadgePerlindungan, BadgeBakat, BadgeKeterampilan } from "../../assets/images";
 import { RightTwig, LeftTwig } from "../../assets/images";
 
 import { useState } from "react";
@@ -15,21 +15,21 @@ const ArticleList = () => {
     },
     {
       thumbnail: ThumbnailPerlindungan1,
-      badgeStatus: BadgePendidikan,
+      badgeStatus: BadgePerlindungan,
       date: "25 Juli 2022",
       title: "Cara Mengatasi Bullying dan Tips untuk Mencegahnya",
       description: `Kasus bullying di Indonesia sudah sering sekali terdengar. Bahkan ada juga yang berakhir dengan kematian.`,
     },
     {
       thumbnail: ThumbnailPerlindungan2,
-      badgeStatus: BadgePendidikan,
+      badgeStatus: BadgePerlindungan,
       date: "07 September 2021",
       title: "Pencegahan Tindakan Bullying pada Anak Usia Dini",
       description: `Tindakan bullying pada anak usia dini maupun usia remaja tidak pernah dibenarkan oleh pihak manapun.`,
     },
     {
       thumbnail: ThumbnailBakat1,
-      badgeStatus: BadgePendidikan,
+      badgeStatus: BadgeBakat,
       date: "27 Juli 2022",
       title: "Pengaruh Minat terhadap Bakat pada Remaja",
       description: `Bakat merupakan potensi bawaan yang dimiliki manusia, sedangkan minat tercipta karena adanya ketertarikan kuat atas sesuatu.s`,
@@ -43,7 +43,7 @@ const ArticleList = () => {
     },
     {
       thumbnail: ThumbnailKeterampilan1,
-      badgeStatus: BadgePendidikan,
+      badgeStatus: BadgeKeterampilan,
       date: "29 Maret 2023",
       title: "Mengasah Keterampilan Anak melalui Kegiatan STEM",
       description: `STEM (Science, Technology, Engineering, and Mathematics) adalah disiplin ilmu yang terkait dengan sains, teknologi, teknik, dan matematika.`,
