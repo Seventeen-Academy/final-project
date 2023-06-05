@@ -6,7 +6,7 @@ import { TiPointOfInterestOutline } from "react-icons/ti";
 import { TbCertificate } from "react-icons/tb";
 import { FaUserCircle } from "react-icons/fa";
 import { MdOutlineClass } from "react-icons/md";
-const dataKelas = [
+const dataDetailKelas = [
   {
     title: "Terakhir Diupdate",
     status: "December 2022",
@@ -21,7 +21,7 @@ const dataKelas = [
   },
   { title: "Bahasa", status: "Indonesia" },
 ];
-function Kelas() {
+function DetailKelas() {
   return (
     <main className="bg-grey pt-4">
       <div className="container">
@@ -201,4 +201,4 @@ function Kelas() {
   );
 }
 
-export default Kelas;
+export default DetailKelas;
