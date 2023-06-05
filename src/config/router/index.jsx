@@ -8,6 +8,7 @@ import Article from "../../pages/Article";
 import Login from "../../pages/Login";
 import Payment from "../../pages/Payment";
 import Form from "../../pages/Form";
+import DetailKelas from "../../pages/DetailKelas";
 
 const Router = () => {
   return (
@@ -21,6 +22,7 @@ const Router = () => {
         <Route path="/sign-up" element={<Register />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/form" element={<Form />} />
+        <Route path="/detailkelas" element={<DetailKelas />} />
       </Routes>
     </>
   );
