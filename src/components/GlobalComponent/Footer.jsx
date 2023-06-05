@@ -1,10 +1,22 @@
-import { GithubIcon, InstagramIcon, LogoWhiteIcon, YoutubeIcon } from "../../assets/icons";
+import {
+  GithubIcon,
+  InstagramIcon,
+  LogoWhiteIcon,
+  YoutubeIcon,
+} from "../../assets/icons";
+import {
+  GithubIcon,
+  InstagramIcon,
+  LogoWhiteIcon,
+  YoutubeIcon,
+} from "../../assets/icons";
+import "../../assets/css/style-footer.css";
 
 const Footer = () => {
   return (
     <>
-      <footer>
-        <div className="container mt-5 pt-5 pb-2">
+      <footer className="full-bg-width mt-5">
+        <div className="container py-4">
           <div className="row">
             <div className="col-md-5">
               <img src={LogoWhiteIcon} />
@@ -61,7 +73,14 @@ const Footer = () => {
               </ul>
             </div>
             <div className="row">
-              <span className="copyright">Copyright © 2023 SEVA ALL RIGHT RESERVED</span>
+              <span className="copyright">
+                Copyright © 2023 SEVA ALL RIGHT RESERVED
+              </span>
+              <div className="col-sm-12 col-md-12 col-lg-12">
+                <span className="copyright">
+                  Copyright © 2023 SEVA ALL RIGHT RESERVED
+                </span>
+              </div>
             </div>
           </div>
         </div>

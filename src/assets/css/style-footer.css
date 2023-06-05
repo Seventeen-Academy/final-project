@@ -1,31 +1,32 @@
 footer {
-    background-color: #1B0D44;
-    font-family: 'Poppins';
-    font-size: 16px;
-    color: #FAF8F9;
+  background-color: #1b0d44;
+  font-family: "Poppins";
+  font-size: 16px;
+  color: #faf8f9;
+  width: 100vw;
 }
 
 footer .tag {
-    font-size: 14px;
-    color: rgb(255, 248, 249, 0.8)
+  font-size: 14px;
+  color: rgb(255, 248, 249, 0.8);
 }
 
 footer ul li {
-    list-style: none;
-    margin-left: -32px;
-    margin-top: 16px;
+  list-style: none;
+  margin-left: -32px;
+  margin-top: 16px;
 }
 
 footer ul li a {
-    text-decoration: none;
-    color: #FAF8F9;
+  text-decoration: none;
+  color: #faf8f9;
 }
 
 footer ul li a:hover {
-    color: #FAF8F9;
+  color: #faf8f9;
 }
 
 footer .copyright {
-    font-size: 14px;
-    color: rgb(255, 248, 249, 0.5);
+  font-size: 14px;
+  color: rgb(255, 248, 249, 0.5);
 }

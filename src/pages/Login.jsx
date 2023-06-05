@@ -73,12 +73,13 @@ const Login = () => {
                 >
                   Lupa kata sandi?
                 </a>
-                <button
+                <Link
+                  to="/account/profile"
                   type="submit"
                   className="btn btn-login bgr-alternative color-light mt-3"
                 >
                   Masuk
-                </button>
+                </Link>
               </form>
               <div className="row">
                 <div className="col mt-3 register d-flex justify-content-center">

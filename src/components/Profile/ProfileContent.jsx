@@ -26,19 +26,21 @@ const ProfileContent = () => {
           </div>
           <h1 className="tag-name mt-2">Gema Kurnia Ramadhan</h1>
           <h3 className="campus mb-4">Universitas Gunadarma</h3>
-          <div className="card-level w-100">
+
+          <div className="card-level w-75">
             <div className="row">
               <div className="col-sm-4 col-md-4 col-xl-4 p-4">
-                <img src={JuniorLevel} alt="" className="img-fluid" />
+                <img src={JuniorLevel} alt="" className="img-fluid my-3" />
               </div>
-              <div className="col-sm-8 col-md-8 col-xl-8 p-4">
+              <div className="col-sm-8 col-md-8 col-xl-8 p-4 my-3">
                 <h3 className="tagline-level ms-4">Level kamu saat ini</h3>
                 <hr className="line-level" />
                 <h1 className="level-status">Junior</h1>
               </div>
             </div>
           </div>
-          <div className="point-status w-100 mt-3 rounded">
+
+          <div className="point-status w-75 mt-3 rounded mb-4">
             <div className="row">
               <div className="col-sm-8 col-md-8 col-xl-8 p-4">
                 <h3 className="tagline-level ms-4">Point kamu saat ini</h3>

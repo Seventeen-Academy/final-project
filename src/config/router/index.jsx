@@ -10,11 +10,17 @@ import Payment from "../../pages/Payment";
 import Form from "../../pages/Form";
 import DetailKelas from "../../pages/DetailKelas";
 import DetailArticle from "../../pages/DetailArticle";
+import Dashboard from "../../pages/AccountMenu/Dashboard";
+import MyCourse from "../../pages/AccountMenu/MyCourse";
+import Profile from "../../pages/AccountMenu/Profile";
+import Transaction from "../../pages/AccountMenu/Transaction";
+import Award from "../../pages/AccountMenu/Award";
 
 const Router = () => {
   return (
     <>
       <Routes>
+        {/* ========= Navbar ========= */}
         <Route path="/" element={<LandingPage />} />
         <Route path="/course" element={<Course />} />
         <Route path="/article" element={<Article />} />
@@ -25,6 +31,13 @@ const Router = () => {
         <Route path="/form" element={<Form />} />
         <Route path="/detailkelas" element={<DetailKelas />} />
         <Route path="/article/detailarticle" element={<DetailArticle />} />
+
+        {/* ========= Sidebar ========= */}
+        <Route path="/account/dashboard" element={<Dashboard />} />
+        <Route path="/account/mycourse" element={<MyCourse />} />
+        <Route path="/account/transaction" element={<Transaction />} />
+        <Route path="/account/profile" element={<Profile />} />
+        <Route path="/account/awardS" element={<Award />} />
       </Routes>
     </>
   );
