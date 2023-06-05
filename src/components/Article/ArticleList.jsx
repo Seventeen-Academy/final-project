@@ -1,4 +1,4 @@
-import { ThumbnailBakat1, ThumbnailKeterampilan1, ThumbnailPendidikan1, ThumbnailPendidikan2, ThumbnailPerlindungan1, ThumbnailPerlindungan2 } from "../../assets/images";
+import { ThumbnailBakat1, ThumbnailKeterampilan1, ThumbnailPendidikan1, ThumbnailPendidikan2, ThumbnailPerlindungan1, ThumbnailPerlindungan2, BadgePendidikan } from "../../assets/images";
 import { RightTwig, LeftTwig } from "../../assets/images";
 
 import { useState } from "react";
@@ -8,42 +8,42 @@ const ArticleList = () => {
   const [article, useArticle] = useState([
     {
       thumbnail: ThumbnailPendidikan1,
-      badgeStatus: "Pendidikan",
+      badgeStatus: BadgePendidikan,
       date: "01 April 2023",
       title: "Resensi Buku: Sistem Pendidikan Finlandia Catatan dan Pengalaman Seorang Ibu",
       description: `Elinikainen oppiminen atau pembelajaran seumur hidup merupakan moto dalam sistem pendidikan Finlandia.`,
     },
     {
       thumbnail: ThumbnailPerlindungan1,
-      badgeStatus: "Perlindungan",
+      badgeStatus: BadgePendidikan,
       date: "25 Juli 2022",
       title: "Cara Mengatasi Bullying dan Tips untuk Mencegahnya",
       description: `Kasus bullying di Indonesia sudah sering sekali terdengar. Bahkan ada juga yang berakhir dengan kematian.`,
     },
     {
       thumbnail: ThumbnailPerlindungan2,
-      badgeStatus: "Perlindungan",
+      badgeStatus: BadgePendidikan,
       date: "07 September 2021",
       title: "Pencegahan Tindakan Bullying pada Anak Usia Dini",
       description: `Tindakan bullying pada anak usia dini maupun usia remaja tidak pernah dibenarkan oleh pihak manapun.`,
     },
     {
       thumbnail: ThumbnailBakat1,
-      badgeStatus: "Minat Bakat",
+      badgeStatus: BadgePendidikan,
       date: "27 Juli 2022",
       title: "Pengaruh Minat terhadap Bakat pada Remaja",
       description: `Bakat merupakan potensi bawaan yang dimiliki manusia, sedangkan minat tercipta karena adanya ketertarikan kuat atas sesuatu.s`,
     },
     {
       thumbnail: ThumbnailPendidikan2,
-      badgeStatus: "Pendidikan",
+      badgeStatus: BadgePendidikan,
       date: "02 Mei 2023",
       title: "Pembelajaran Sosial Emosional",
       description: `Pembelajaran Sosial dan Emosional dapat menciptakan lingkungan belajar yang aman dan nyaman`,
     },
     {
       thumbnail: ThumbnailKeterampilan1,
-      badgeStatus: "Keterampilan",
+      badgeStatus: BadgePendidikan,
       date: "29 Maret 2023",
       title: "Mengasah Keterampilan Anak melalui Kegiatan STEM",
       description: `STEM (Science, Technology, Engineering, and Mathematics) adalah disiplin ilmu yang terkait dengan sains, teknologi, teknik, dan matematika.`,
@@ -58,13 +58,13 @@ const ArticleList = () => {
             <div className="col-12 col-md-6 col-lg-4" key={index}>
               <Link to="/DetailArticle"></Link>
 
-              <div className="card">
+              <div className="card card-article">
                 <img src={item.thumbnail} alt="" />
                 <div className="card-body">
                   <div className="row">
                     <div className="col-6">
                       <div className="kategori-wrapper d-flex ms-1">
-                        <span className="badge bgr-secondary">{item.badgeStatus}</span>
+                        <img src={item.badgeStatus} className="img-fluid" />
                       </div>
                     </div>
                     <div className="col-6 d-flex justify-content-end">

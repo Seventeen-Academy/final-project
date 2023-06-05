@@ -8,11 +8,21 @@ const ArticleFilter = () => {
           <div className="row">
             <div className="col-lg-12 d-flex justify-content-center">
               <ul id="kategori-filters">
-                <li className="filter-active">Semua</li>
-                <li>Pendidikan</li>
-                <li>Perlindungan</li>
-                <li>Keterampilan</li>
-                <li>Minat Bakat</li>
+                <li className="filter-active">
+                  <button className="btn btn-text">Semua</button>
+                </li>
+                <li>
+                  <button className="btn btn-text">Pendidikan</button>
+                </li>
+                <li>
+                  <button className="btn btn-text">Perlindungan</button>
+                </li>
+                <li>
+                  <button className="btn btn-text">Keterampilan</button>
+                </li>
+                <li>
+                  <button className="btn btn-text">Minat Bakat</button>
+                </li>
               </ul>
             </div>
           </div>
