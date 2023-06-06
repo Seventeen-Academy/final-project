@@ -24,11 +24,11 @@ const AwardContent = () => {
     <>
       <div className="card card-rounded shadow-sm">
         <div className="card-body d-flex flex-column">
-          <h3 className="title mb-4">Total point yang didapatkan</h3>
+          <h3 className="title mt-3 mb-4">Total point yang didapatkan</h3>
           <div className="card-level w-100">
             <div className="row">
-              <div className="col-sm-4 col-md-4 col-xl-4 p-4 align-items-center">
-                <img src={LogoPoint} alt="" className="img-fluid" />
+              <div className="col-sm-4 col-md-4 col-xl-4 p-4">
+                <img src={LogoPoint} alt="" className="img-fluid my-auto" />
               </div>
               <div className="col-sm-8 col-md-8 col-xl-8 p-4 my-3">
                 <h3 className="tagline-level">Point yang terkumpul</h3>
@@ -41,28 +41,27 @@ const AwardContent = () => {
       </div>
 
       <div className="card card-rounded shadow-sm mt-4">
-        <div className="card-body">
+        <div className="card-body mt-3">
           <h3 className="title mb-4">Hadiah yang dapat ditukarkan</h3>
-          <div className="reward-status w-100 mt-3 rounded mb-4">
-            <div className="row">
-              {award.map((item, index) => (
-                <div className="container d-flex" key={index}>
-                  <div className="col-sm-8 col-md-8 col-xl-8 p-4">
+          {award.map((item, index) => (
+            <div className="reward-status w-100 mt-3 rounded mb-4" key={index}>
+              <div className="row">
+                <div className="container d-flex">
+                  <div className="col-sm-8 col-md-8 col-xl-8 py-4 px-2">
                     <h3 className="tagline-reward ms-4">{item.taglineReward}</h3>
                     <hr className="line-reward-2 ms-4" />
                     <h1 className="current-point ms-4">{item.currentPoint}</h1>
-                    <button className="btn btn-text bgr-alternative my-auto mx-4">Tukarkan Point</button>
-                    {/* <h3 className="desc ms-4">
-                      Perlu <span className="need-point">250</span> lagi untuk menjadi <span className="upgrade-level">Senior</span>
-                    </h3> */}
+                    <button className="btn bgr-alternative my-2 mx-4 py-2 px-3">
+                      <h3 className="button-text color-light my-auto ">Tukar Point</h3>
+                    </button>
                   </div>
-                  <div className="col-sm-4 col-md-4 col-xl-4 p-4">
-                    <img src={item.imgReward} alt="" className="img-fluid me-3 my-auto" />
+                  <div className="col-sm-4 col-md-4 col-xl-4 mx-5 my-auto">
+                    <img src={item.imgReward} alt="" className="img-fluid" />
                   </div>
                 </div>
-              ))}
+              </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </>

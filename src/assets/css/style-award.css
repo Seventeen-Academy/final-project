@@ -13,8 +13,8 @@ body {
 }
 
 .award .title h3 {
-  font-family: "Poppins-Medium";
-  font-size: 24px;
+  font-family: "PoppinsMedium";
+  font-size: 20px;
 }
 
 .award .card-level {
@@ -24,20 +24,20 @@ body {
 }
 
 .award .tagline-level {
-  font-family: "Poppins-Medium";
-  font-size: 20px;
+  font-family: "PoppinsMedium";
+  font-size: 16px;
   color: rgba(250, 248, 249, 0.75);
 }
 
 .award .tagline-reward {
-  font-family: "Poppins-Medium";
-  font-size: 20px;
+  font-family: "PoppinsMedium";
+  font-size: 16px;
   color: rgba(250, 248, 249, 0.75);
 }
 
 .award .line-level {
   height: 4px;
-  width: 210px;
+  width: 172px;
   background-color: #49dbef;
 }
 
@@ -54,7 +54,7 @@ body {
 .award .line-reward-2 {
   background-color: #49dbef;
   height: 4px;
-  width: 150px;
+  width: 360px;
 }
 
 .award .current-point {
@@ -63,30 +63,15 @@ body {
   color: #faf8f9;
 }
 
-/* .award button .btn .btn-text {
-  font-family: "Poppins-Medium";
-  font-size: 20px;
-  color: rgba(250, 248, 249, 0.75);
-} */
-
-/* 
-.award .desc {
-  font-family: "Poppins-Medium";
-  font-size: 20px;
-  color: #faf8f9;
+.award .btn:hover {
+  background-color: #6e67cf;
+  color: #ffffff;
 }
 
-.award .need-point {
-  font-family: "PoppinsBold";
-  font-size: 20px;
-  color: #faf8f9;
+.award .button-text {
+  font-family: "PoppinsMedium";
+  font-size: 16px;
 }
-
-.award .upgrade-level {
-  font-family: "PoppinsBold";
-  font-size: 20px;
-  color: #60dae0;
-} */
 
 .footer-award {
   font-size: 16px;

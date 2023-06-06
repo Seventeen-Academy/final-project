@@ -6,19 +6,19 @@ import "./assets/plugins/bootstrap/js/bootstrap.js";
 
 import "./assets/css/core.css";
 import "./assets/css/responsive.css";
-// import Router from "./config/router";
+import Router from "./config/router";
 // import Payment from "./pages/Payment";
 // import DetailKelas from "./pages/Detailkelas";
-import DetailProfile from "./pages/DetailProfile";
+// import DetailProfile from "./pages/DetailProfile";
 
 function App() {
   return (
     <>
       <BrowserRouter>
-      <DetailProfile />
+        <Router />
       </BrowserRouter>
 
-      
+      {/* <DetailProfile /> */}
     </>
   );
 }
