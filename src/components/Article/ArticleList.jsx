@@ -52,7 +52,7 @@ const ArticleList = () => {
   return (
     <>
       <img src={RightTwig} alt="" className="right-twig" />
-      <section className="container artikel-list mt-5">
+      <section className=" artikel-list mt-5">
         <div className="row g-3">
           {article.map((item, index) => (
             <div className="col-12 col-md-6 col-lg-4" key={index}>
