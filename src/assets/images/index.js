@@ -43,6 +43,10 @@ import TransactionSuccess from "./transaction-success.png";
 import TransactionGit from "./transaction-git.png";
 import TransactionHTML from "./transaction-html.png";
 import TransactionPHP from "./transaction-php.png";
+import RewardCoin from "./reward-coin.png";
+import RewardGem from "./reward-gem.png";
+import RewardHoodie from "./reward-hoodie.png";
+import LogoPoint from "./logo-point.png";
 
 export {
   BukuAgama,
@@ -89,4 +93,8 @@ export {
   TransactionHTML,
   TransactionGit,
   TransactionPHP,
+  RewardCoin,
+  RewardGem,
+  RewardHoodie,
+  LogoPoint,
 };
