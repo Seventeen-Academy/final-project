@@ -1,7 +1,7 @@
-import "../assets/css/style-about.css";
 import Navbar from "../components/GlobalComponent/Navbar";
 import Footer from "../components/GlobalComponent/Footer";
 import MainLayout from "../layout/MainLayout";
+import "../assets/css/style-about.css";
 
 const About = () => {
   return (
@@ -9,9 +9,25 @@ const About = () => {
     <MainLayout>
     <div className="container">
     <Navbar />
-    <section class="benefit mt-5 px-2"> 
-
+    <section className="hero mt-3">
+    <div className="row h-100">
+    <div className="col-md-5 col my-auto">
+      <img
+        src="https://i.imgur.com/M204MCE.png"
+        alt="Gambar Petualang"
+        className="img-fluid"
+      />
+    </div>
+    </div>
+    <div className="kata col-md-10 col my-auto ">
+      <h1 className="title color-dark ms-3">Seventeen Academy (SevA)</h1>
+      <p className="paragraph color-dark my-3 ms-3">
+      SevA merupakan sebuah website pembelajaran interaktif dengan latar belakang game RPG. Menggabungkan tema game RPG dan pembelajaran online diharapkan dapat menghadirkan pembelajaran yang menarik sehingga anak bisa belajar dengan menyenangkan.
+        </p>
+          <img src="https://i.imgur.com/2pExLRP.png" className="bg-ranting" width="180" />
+          </div>
     </section>
+
     <section class="benefit mt-5 px-2">
     <h4 className="title color-dark text-center">Tujuan SevA</h4>
     <h4 className="tag color-dark text-center">
@@ -32,21 +48,8 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className="card mt-4 shadow-sm p-2">
-              <img
-                src="https://i.ibb.co/kK6SCDS/Sword-Terjangkau.png"
-                className="m-2 img-fluid"
-                width="76"
-              />
-              <div className="card-body">
-                <h5 className="title color-dark">Terjangkau</h5>
-                <p className="paragraph color-subdark">
-                  Memberikan akses kelas dengan biaya terjangkau
-                </p>
-              </div>
             </div>
-          </div>
-          <div className="col-md-3 my-2">
+            <div className="col-md-3 my-2">
             <div className="card mt-4 shadow-sm p-2">
               <img
                 src="https://i.ibb.co/JpDjVqX/Sword-Interaktif.png"
@@ -60,21 +63,10 @@ const About = () => {
                 </p>
               </div>
             </div>
+            </div>
+            <div className="col-md-3 my-2">
             <div className="card mt-4 shadow-sm p-2">
               <img
-                src="https://i.ibb.co/pncKs2J/Sword-Perlindungan.png"
-                className="m-2 img-fluid"
-                width="76"
-              />
-              <div className="card-body">
-                <h5 className="title color-dark">Perlindungan</h5>
-                <p className="paragraph color-subdark">
-                  Menyediakan laporan perundungan
-                </p>
-              </div>
-            </div>
-            <div className="card mt-4 shadow-sm p-2">
-            <img
                 src="https://i.imgur.com/24bL4NQ.png"
                 className="m-2 img-fluid"
                 width="76"
@@ -86,15 +78,120 @@ const About = () => {
                 </p>
               </div>
             </div>
-          </div>
-        </div>
+            </div>
+            <div className="col-md-3 my-2">
+            <div className="card mt-4 shadow-sm p-2">
+              <img
+                src="https://i.ibb.co/kK6SCDS/Sword-Terjangkau.png"
+                className="m-2 img-fluid"
+                width="76"
+              />
+              <div className="card-body">
+                <h5 className="title color-dark">Terjangkau</h5>
+                <p className="paragraph color-subdark">
+                  Memberikan akses kelas dengan biaya terjangkau
+                </p>
+              </div>
+            </div>
+            </div>
+            <div className="col-md-3 my-2">
+            <div className="card mt-4 shadow-sm p-2">
+              <img
+                src="https://i.ibb.co/pncKs2J/Sword-Perlindungan.png"
+                className="m-2 img-fluid"
+                width="76"
+              />
+              <div className="card-body">
+                <h5 className="title color-dark">Perlindungan</h5>
+                <p className="paragraph color-subdark">
+                  Menyediakan Laporan perundungan
+                </p>
+              </div>
+            </div>
+            </div>
+            </div>
+            
+            
     </section>
-    <section class="benefit mt-5 px-4">
+    <section class="benefit mt-10 px-4">
     <h4 className="title color-dark text-center">Pengembang SevA</h4>
     <h4 className="tag color-dark text-center">
       Mari mengenal pengembang platform pendidikan SevA
       </h4>
-      <div class="card border-0 bg-transparent" id="card">
+      <div className="row">
+        <div className="col-md-3 my-2">
+          <div class="card border-0 bg-transparent" id="card">
+            <img src="https://i.imgur.com/OKeLlh7.png" className="m-6 img-fluid mt-4 p-2" width="200"/>
+            <div className="card-body">
+              <h5 className="title color-dark">Maulana Yusuf</h5>
+              <p className="paragraph color-subdark ">
+                STIMK "AMIKBANDUNG"
+                </p>
+                <a href="#" class="text-decoration-none me-3">
+                  <i class="fab fa-linkedin"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-instagram"></i>
+                    </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="col-md-3 my-2">
+          <div class="card border-0 bg-transparent" id="card">
+            <img src="https://i.imgur.com/p5PA14u.png" className="m-6 img-fluid mt-4 p-2" width="200"/>
+            <div className="card-body">
+            <h5 className="title color-dark">Tasya Adila Putri</h5>
+            <p className="paragraph color-subdark ">
+              Universitas Lampung
+              </p>
+              <a href="#" class="text-decoration-none me-3">
+                <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-instagram"></i>
+                  </a>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-3 my-2">
+          <div class="card border-0 bg-transparent" id="card">
+            <img src="https://i.imgur.com/vVC9u4Z.png" className="m-6 img-fluid mt-4 p-2" width="200"/>
+            <div className="card-body">
+              <h5 className="title color-dark">Gema Kurnia Ramadhan</h5>
+              <p className="paragraph color-subdark ">
+                Universitas Gunadarma
+                </p>
+                <a href="#" class="text-decoration-none me-3">
+                  <i class="fab fa-linkedin"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-instagram"></i>
+                    </a>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-3 my-2">
+          <div class="card border-0 bg-transparent" id="card">
+            <img src="https://i.imgur.com/OjMTNIU.png" className="m-6 img-fluid mt-4 p-2" width="200"/>
+            <div className="card-body">
+              <h5 className="title color-dark">Velani Nur Hanifah</h5>
+              <p className="paragraph color-subdark ">
+                Universitas Negeri Yogyakarta
+                </p>
+                <a href="#" class="text-decoration-none me-3">
+                  <i class="fab fa-linkedin"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-instagram"></i>
+                    </a>
+            </div>
+          </div>
+        </div>
+      
+                    
+
+      {/* <div class="card border-0 bg-transparent" id="card">
       <img
       src="https://i.imgur.com/OKeLlh7.png"
       className="m-6 img-fluid mt-4 p-2" width="200"/>
@@ -110,8 +207,8 @@ const About = () => {
             <i class="fab fa-instagram"></i>
           </a>
           </div>
-      </div>
-      <div class="card border-0 bg-transparent" id="card">
+      </div> */}
+      {/* <div class="card border-0 bg-transparent" id="card">
       <img
       src="https://i.imgur.com/p5PA14u.png"
       className="m-6 img-fluid mt-4 p-2" width="200"/>
@@ -161,7 +258,7 @@ const About = () => {
             <i class="fab fa-instagram"></i>
           </a>
           </div>
-      </div>
+      </div> */}
     </section>
     </div>
     <Footer />
