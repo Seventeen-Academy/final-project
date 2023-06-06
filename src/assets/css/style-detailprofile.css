@@ -1,0 +1,38 @@
+.btn-img {
+    background: #5f0273;
+    color: white;
+    border: none;
+  }
+  .input-wrapper > input {
+    border: 1pt solid grey;
+    margin-top: 0.5rem;
+  }
+  .input-wrapper {
+    margin-top: 1rem;
+  }
+  .dtl.active {
+    color: #5f0273;
+    border-left: 2pt solid #5f0273;
+  }
+  .dtl {
+    border-left: 2pt solid grey;
+    padding: 0.5rem;
+    color: grey;
+    margin: 1rem;
+    font-size: 1.2rem;
+  }
+  .avatar {
+    border-radius: 50%;
+  }
+  @media screen and (max-width: 992px) {
+    .dtl {
+      border-bottom: 2pt solid grey;
+      border-left: none;
+      font-size: 1rem;
+    }
+    .dtl.active {
+      border-bottom: 2pt solid #5f0273;
+      border-left: none;
+    }
+  }
+  

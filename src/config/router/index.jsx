@@ -16,6 +16,7 @@ import Profile from "../../pages/AccountMenu/Profile";
 import Transaction from "../../pages/AccountMenu/Transaction";
 import Award from "../../pages/AccountMenu/Award";
 import NotFound from "../../pages/NotFound";
+import DetailProfile from "../../pages/DetailProfile";
 
 const Router = () => {
   return (
@@ -33,12 +34,15 @@ const Router = () => {
         <Route path="/detailkelas" element={<DetailKelas />} />
         <Route path="/article/detailarticle" element={<DetailArticle />} />
 
+
         {/* ========= Sidebar ========= */}
         <Route path="/account/dashboard" element={<Dashboard />} />
         <Route path="/account/mycourse" element={<MyCourse />} />
         <Route path="/account/transaction" element={<Transaction />} />
         <Route path="/account/profile" element={<Profile />} />
         <Route path="/account/award" element={<Award />} />
+        <Route path="/account/detailprofile" element={<DetailProfile/>} />
+
 
         {/* ====== 404 NotFound ======= */}
         <Route path="*" element={<NotFound />} />
