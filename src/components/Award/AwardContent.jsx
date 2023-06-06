@@ -41,7 +41,7 @@ const AwardContent = () => {
       </div>
 
       <div className="card card-rounded shadow-sm mt-4">
-        <div className="card-body ">
+        <div className="card-body">
           <h3 className="title mb-4">Hadiah yang dapat ditukarkan</h3>
           <div className="reward-status w-100 mt-3 rounded mb-4">
             <div className="row">
@@ -51,6 +51,7 @@ const AwardContent = () => {
                     <h3 className="tagline-reward ms-4">{item.taglineReward}</h3>
                     <hr className="line-reward-2 ms-4" />
                     <h1 className="current-point ms-4">{item.currentPoint}</h1>
+                    <button className="btn btn-text bgr-alternative my-auto mx-4">Tukarkan Point</button>
                     {/* <h3 className="desc ms-4">
                       Perlu <span className="need-point">250</span> lagi untuk menjadi <span className="upgrade-level">Senior</span>
                     </h3> */}
