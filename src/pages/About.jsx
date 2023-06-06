@@ -1,11 +1,171 @@
+import "../assets/css/style-about.css";
 import Navbar from "../components/GlobalComponent/Navbar";
 import Footer from "../components/GlobalComponent/Footer";
+import MainLayout from "../layout/MainLayout";
 
 const About = () => {
   return (
     <>
+    <MainLayout>
+    <div className="container">
     <Navbar />
+    <section class="benefit mt-5 px-2"> 
+
+    </section>
+    <section class="benefit mt-5 px-2">
+    <h4 className="title color-dark text-center">Tujuan SevA</h4>
+    <h4 className="tag color-dark text-center">
+      Mari mengetahui tujuan dan manfaat SevA dibuat
+      </h4>
+      <div className="row">
+          <div className="col-md-3 my-2">
+            <div className="card mt-4 shadow-sm p-2">
+              <img
+                src="https://i.ibb.co/ZM0w5Ft/Sword-Penghargaan.png"
+                className="m-2 img-fluid"
+                width="76"
+              />
+              <div className="card-body">
+                <h5 className="title color-dark">Pembelajaran</h5>
+                <p className="paragraph color-subdark">
+                  Membantu anak dalam pembelajaran
+                </p>
+              </div>
+            </div>
+            <div className="card mt-4 shadow-sm p-2">
+              <img
+                src="https://i.ibb.co/kK6SCDS/Sword-Terjangkau.png"
+                className="m-2 img-fluid"
+                width="76"
+              />
+              <div className="card-body">
+                <h5 className="title color-dark">Terjangkau</h5>
+                <p className="paragraph color-subdark">
+                  Memberikan akses kelas dengan biaya terjangkau
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-3 my-2">
+            <div className="card mt-4 shadow-sm p-2">
+              <img
+                src="https://i.ibb.co/JpDjVqX/Sword-Interaktif.png"
+                className="m-2 img-fluid"
+                width="76"
+              />
+              <div className="card-body">
+                <h5 className="title color-dark">Inovasi</h5>
+                <p className="paragraph color-subdark">
+                  Menghadirkan inovasi baru dalam pembelajaran
+                </p>
+              </div>
+            </div>
+            <div className="card mt-4 shadow-sm p-2">
+              <img
+                src="https://i.ibb.co/pncKs2J/Sword-Perlindungan.png"
+                className="m-2 img-fluid"
+                width="76"
+              />
+              <div className="card-body">
+                <h5 className="title color-dark">Perlindungan</h5>
+                <p className="paragraph color-subdark">
+                  Menyediakan laporan perundungan
+                </p>
+              </div>
+            </div>
+            <div className="card mt-4 shadow-sm p-2">
+            <img
+                src="https://i.imgur.com/24bL4NQ.png"
+                className="m-2 img-fluid"
+                width="76"
+              />
+              <div className="card-body">
+                <h5 className="title color-dark">Keterampilan</h5>
+                <p className="paragraph color-subdark">
+                  Mengembangkan keterampilan digital
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section class="benefit mt-5 px-4">
+    <h4 className="title color-dark text-center">Pengembang SevA</h4>
+    <h4 className="tag color-dark text-center">
+      Mari mengenal pengembang platform pendidikan SevA
+      </h4>
+      <div class="card border-0 bg-transparent" id="card">
+      <img
+      src="https://i.imgur.com/OKeLlh7.png"
+      className="m-6 img-fluid mt-4 p-2" width="200"/>
+      <div className="card-body">
+        <h5 className="title color-dark">Maulana Yusuf</h5>
+        <p className="paragraph color-subdark ">
+          STIMK "AMIKBANDUNG"
+          </p>
+          <a href="#" class="text-decoration-none me-3">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-instagram"></i>
+          </a>
+          </div>
+      </div>
+      <div class="card border-0 bg-transparent" id="card">
+      <img
+      src="https://i.imgur.com/p5PA14u.png"
+      className="m-6 img-fluid mt-4 p-2" width="200"/>
+      <div className="card-body">
+        <h5 className="title color-dark">Tasya Adila Putri</h5>
+        <p className="paragraph color-subdark ">
+          Universitas Lampung
+          </p>
+          <a href="#" class="text-decoration-none me-3">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-instagram"></i>
+          </a>
+          </div>
+      </div>
+      <div class="card border-0 bg-transparent" id="card">
+      <img
+      src="https://i.imgur.com/vVC9u4Z.png"
+      className="m-6 img-fluid mt-4 p-2" width="200"/>
+      <div className="card-body">
+        <h5 className="title color-dark">Gema Kurnia Ramadhan</h5>
+        <p className="paragraph color-subdark ">
+          Universitas Gunadarma
+          </p>
+          <a href="#" class="text-decoration-none me-3">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-instagram"></i>
+          </a>
+          </div>
+      </div>
+      <div class="card border-0 bg-transparent" id="card">
+      <img
+      src="https://i.imgur.com/OjMTNIU.png"
+      className="m-6 img-fluid mt-4 p-2" width="200"/>
+      <div className="card-body">
+        <h5 className="title color-dark">Velani Nur Hanifah</h5>
+        <p className="paragraph color-subdark ">
+          Universitas Negeri Yogyakarta
+          </p>
+          <a href="#" class="text-decoration-none me-3">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-instagram"></i>
+          </a>
+          </div>
+      </div>
+    </section>
+    </div>
     <Footer />
+    </MainLayout>
     </>
   );
 };
