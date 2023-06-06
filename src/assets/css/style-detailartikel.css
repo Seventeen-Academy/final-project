@@ -1,0 +1,20 @@
+.content h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+.content p {
+  margin-bottom: 20px;
+  font-size: 14px;
+  text-align: justify;
+}
+
+#daun {
+  position: absolute;
+  right: 0;
+}
+
+#ranting {
+  position: absolute;
+  left: 0;
+  margin-top: -15%;
+}

@@ -16,9 +16,8 @@ function App() {
     <>
       <BrowserRouter>
         <Router />
+        {/* <DetailProfile /> */}
       </BrowserRouter>
-
-      {/* <DetailProfile /> */}
     </>
   );
 }

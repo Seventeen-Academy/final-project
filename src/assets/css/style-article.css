@@ -17,13 +17,13 @@ a {
 .kategori #kategori-filters li {
   cursor: pointer;
   display: inline-block;
-  padding: 8px 16px 8px 16px;
+  padding: 4px 16px 4px 16px;
   font-size: 16px;
   line-height: 1;
   text-transform: capitalize;
   color: #444444;
   transition: all 0.3s ease-in-out;
-  border-radius: 50px;
+  border-radius: 20px;
   font-family: "PoppinsMedium";
 }
 

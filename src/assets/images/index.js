@@ -47,6 +47,7 @@ import RewardCoin from "./reward-coin.png";
 import RewardGem from "./reward-gem.png";
 import RewardHoodie from "./reward-hoodie.png";
 import LogoPoint from "./logo-point.png";
+import CoverPendidikan1 from "./cover-pendidikan1.png";
 
 export {
   BukuAgama,
@@ -97,4 +98,5 @@ export {
   RewardGem,
   RewardHoodie,
   LogoPoint,
+  CoverPendidikan1,
 };
