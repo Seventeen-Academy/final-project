@@ -1,12 +1,11 @@
 import Navbar from "../components/GlobalComponent/Navbar";
+import Footer from "../components/GlobalComponent/Footer";
 
 const About = () => {
   return (
     <>
-      <div>
-        <Navbar />
-        <h1>About</h1>
-      </div>
+    <Navbar />
+    <Footer />
     </>
   );
 };
