@@ -4,17 +4,20 @@ import ArticleList from "../components/Article/ArticleList";
 // import ArticlePagination from "../components/Article/ArticlePagination";
 import Footer from "../components/GlobalComponent/Footer";
 import Navbar from "../components/GlobalComponent/Navbar";
+import MainLayout from "../layout/MainLayout";
 
 const Article = () => {
   return (
     <>
-      <div>
-        <Navbar />
-        <ArticleFilter />
-        <ArticleList />
+      <MainLayout>
+        <div className="container">
+          <Navbar />
+          <ArticleFilter />
+          <ArticleList />
+          {/* <ArticlePagination /> */}
+        </div>
         <Footer />
-        {/* <ArticlePagination /> */}
-      </div>
+      </MainLayout>
     </>
   );
 };
