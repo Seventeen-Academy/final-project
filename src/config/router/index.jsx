@@ -15,6 +15,7 @@ import MyCourse from "../../pages/AccountMenu/MyCourse";
 import Profile from "../../pages/AccountMenu/Profile";
 import Transaction from "../../pages/AccountMenu/Transaction";
 import Award from "../../pages/AccountMenu/Award";
+import NotFound from "../../pages/NotFound";
 
 const Router = () => {
   return (
@@ -37,7 +38,10 @@ const Router = () => {
         <Route path="/account/mycourse" element={<MyCourse />} />
         <Route path="/account/transaction" element={<Transaction />} />
         <Route path="/account/profile" element={<Profile />} />
-        <Route path="/account/awardS" element={<Award />} />
+        <Route path="/account/award" element={<Award />} />
+
+        {/* ====== 404 NotFound ======= */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );

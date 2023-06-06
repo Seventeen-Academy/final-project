@@ -4,12 +4,6 @@ import {
   LogoWhiteIcon,
   YoutubeIcon,
 } from "../../assets/icons";
-import {
-  GithubIcon,
-  InstagramIcon,
-  LogoWhiteIcon,
-  YoutubeIcon,
-} from "../../assets/icons";
 import "../../assets/css/style-footer.css";
 
 const Footer = () => {
@@ -73,9 +67,6 @@ const Footer = () => {
               </ul>
             </div>
             <div className="row">
-              <span className="copyright">
-                Copyright © 2023 SEVA ALL RIGHT RESERVED
-              </span>
               <div className="col-sm-12 col-md-12 col-lg-12">
                 <span className="copyright">
                   Copyright © 2023 SEVA ALL RIGHT RESERVED

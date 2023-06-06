@@ -114,30 +114,13 @@ const CourseList = () => {
                       <div className="card-footer px-2 bgr-light mb-2">
                         <hr />
                         <Link
-                          to="/payment"
+                          to="/detailkelas"
                           className="btn bgr-alternative btn-class color-light"
                         >
                           Selengkapnya
                         </Link>
                       </div>
                     </div>
-                    <div className="col-6 d-flex justify-content-end">
-                      <h4 className="price-class-card color-alternative me-2 my-auto">
-                        {item.price}
-                      </h4>
-                    </div>
-                  </div>
-                  <div className="card-footer px-2 bgr-light mb-2">
-                    <hr />
-                    {/* <button className="btn bgr-alternative btn-class color-light">
-                      Selengkapnya
-                    </button> */}
-                    <Link
-                      to="/detailkelas"
-                      className="btn bgr-alternative btn-class color-light"
-                    >
-                      Selengkapnya
-                    </Link>
                   </div>
                 </div>
               ))}

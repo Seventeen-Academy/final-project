@@ -37,6 +37,12 @@ import ThumbnailDetailKelas from "./detail-kelas.png";
 import BadgePerlindungan from "./badge-perlindungan.png";
 import BadgeBakat from "./badge-bakat.png";
 import BadgeKeterampilan from "./badge-keterampilan.png";
+import PageNotFound from "./404.png";
+import TransactionCancel from "./transaction-cancel.png";
+import TransactionSuccess from "./transaction-success.png";
+import TransactionGit from "./transaction-git.png";
+import TransactionHTML from "./transaction-html.png";
+import TransactionPHP from "./transaction-php.png";
 
 export {
   BukuAgama,
@@ -77,4 +83,10 @@ export {
   BadgePerlindungan,
   BadgeBakat,
   BadgeKeterampilan,
+  PageNotFound,
+  TransactionCancel,
+  TransactionSuccess,
+  TransactionHTML,
+  TransactionGit,
+  TransactionPHP,
 };
