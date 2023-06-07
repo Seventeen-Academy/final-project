@@ -1,0 +1,39 @@
+.header-complete-course {
+  font-family: "Poppins-Medium";
+  font-size: 24px;
+  color: #121212;
+}
+
+.complete-course .card-complete-course {
+  background-image: url("../images/bg-complete-course.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.complete-course .complete-course-title {
+  font-family: "Poppins-Medium";
+  font-size: 50px;
+  color: #ffffff;
+  line-height: 32px;
+}
+
+.complete-course .btn-certificate:hover {
+  background-color: #6e67cf;
+  color: #ffffff;
+}
+
+.complete-course .complete-course-subtitle {
+  font-family: "Poppins-Medium";
+  font-size: 24px;
+  color: #ffffff;
+  line-height: 24px;
+}
+
+.complete-course .progress-bar {
+  width: 100%;
+  background-color: #3e37a9;
+  color: #ffffff;
+}

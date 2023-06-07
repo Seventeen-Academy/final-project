@@ -13,10 +13,10 @@ const Profile = () => {
             <div className="container mt-5">
               <h1 className="title">Profile Saya</h1>
               <div className="row">
-                <div className="col-sm-12 col-md-9 col-xl-9">
+                <div className="col-sm-12 col-md-9 col-lg-9 col-xl-9">
                   <ProfileContent />
                 </div>
-                <div className="col-sm-12 col-md-3 col-xl-3">
+                <div className="col-sm-12 col-md-3 col-lg-3 col-xl-3">
                   <SideBar />
                 </div>
               </div>

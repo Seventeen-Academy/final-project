@@ -48,6 +48,8 @@ import RewardGem from "./reward-gem.png";
 import RewardHoodie from "./reward-hoodie.png";
 import LogoPoint from "./logo-point.png";
 import CoverPendidikan1 from "./cover-pendidikan1.png";
+import BGCompleteCourse from "./bg-complete-course.png";
+import CompleteHTML from "./complete-html.png";
 
 export {
   BukuAgama,
@@ -99,4 +101,6 @@ export {
   RewardHoodie,
   LogoPoint,
   CoverPendidikan1,
+  BGCompleteCourse,
+  CompleteHTML,
 };
