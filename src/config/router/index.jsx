@@ -35,6 +35,7 @@ const Router = () => {
         <Route path="/article/detailarticle" element={<DetailArticle />} />
 
 
+
         {/* ========= Sidebar ========= */}
         <Route path="/account/dashboard" element={<Dashboard />} />
         <Route path="/account/mycourse" element={<MyCourse />} />

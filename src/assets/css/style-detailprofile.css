@@ -1,5 +1,5 @@
 .btn-img {
-    background: #5f0273;
+    background: #3e37a9;
     color: white;
     border: none;
   }
@@ -11,8 +11,8 @@
     margin-top: 1rem;
   }
   .dtl.active {
-    color: #5f0273;
-    border-left: 2pt solid #5f0273;
+    color: #3e37a9;
+    border-left: 2pt solid #3e37a9;
   }
   .dtl {
     border-left: 2pt solid grey;
@@ -31,8 +31,26 @@
       font-size: 1rem;
     }
     .dtl.active {
-      border-bottom: 2pt solid #5f0273;
+      border-bottom: 2pt solid #3e37a9;
       border-left: none;
     }
+  }
+  
+  .title-password {
+    background: #e4b55c;
+  }
+  
+  .password-container {
+    position: relative;
+  }
+  .show-eye {
+    position: absolute;
+    display: flex;
+    font-size: 1.2rem;
+    right: 2%;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
   }
   
