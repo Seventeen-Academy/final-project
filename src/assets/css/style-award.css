@@ -17,13 +17,13 @@ body {
   font-size: 20px;
 }
 
-.award .card-level {
+.award .card-award {
   background-image: url("../images/bg-point.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-.award .tagline-level {
+.award .tagline-award {
   font-family: "PoppinsMedium";
   font-size: 16px;
   color: rgba(250, 248, 249, 0.75);
@@ -35,15 +35,15 @@ body {
   color: rgba(250, 248, 249, 0.75);
 }
 
-.award .line-level {
+.award .line-award {
   height: 4px;
   width: 172px;
   background-color: #49dbef;
 }
 
-.award .level-status {
+.award .award-status {
   font-family: "PoppinsSemiBold";
-  font-size: 64px;
+  font-size: 68px;
   color: #faf8f9;
 }
 

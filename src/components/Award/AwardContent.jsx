@@ -22,25 +22,25 @@ const AwardContent = () => {
   ]);
   return (
     <>
-      <div className="card card-rounded shadow-sm">
+      <div className="card card-rounded p-4 shadow-sm">
         <div className="card-body d-flex flex-column">
-          <h3 className="title mt-3 mb-4">Total point yang didapatkan</h3>
-          <div className="card-level w-100">
+          <h3 className="title mb-4">Total point yang didapatkan</h3>
+          <div className="card-award w-100 px-4">
             <div className="row">
               <div className="col-sm-4 col-md-4 col-xl-4 p-4">
                 <img src={LogoPoint} alt="" className="img-fluid my-auto" />
               </div>
               <div className="col-sm-8 col-md-8 col-xl-8 p-4 my-3">
-                <h3 className="tagline-level">Point yang terkumpul</h3>
-                <hr className="line-level" />
-                <h1 className="level-status">1500 Point</h1>
+                <h3 className="tagline-award">Point yang terkumpul</h3>
+                <hr className="line-award" />
+                <h1 className="award-status">1500 Point</h1>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="card card-rounded shadow-sm mt-4">
+      <div className="card card-rounded p-4 shadow-sm mt-4">
         <div className="card-body mt-3">
           <h3 className="title mb-4">Hadiah yang dapat ditukarkan</h3>
           {award.map((item, index) => (

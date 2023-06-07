@@ -9,6 +9,24 @@
   font-family: "Poppins";
 }
 
+.link-breadcrumb {
+  font-size: 20px;
+  text-decoration: none;
+  color: #3e37a9;
+}
+
+.link-breadcrumb:hover {
+  font-size: 20px;
+  text-decoration: none;
+  color: #6e67cf;
+}
+
+.current-breadcrumb {
+  font-size: 20px;
+  text-decoration: none;
+  color: #3e37a9;
+}
+
 #daun {
   position: absolute;
   right: 0;

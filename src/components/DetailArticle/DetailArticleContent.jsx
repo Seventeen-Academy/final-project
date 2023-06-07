@@ -17,19 +17,19 @@ const DetailArticleContent = () => {
         {DetailArticle.map((item, index) => (
           <div className="content px-3 my-4" key={index}>
             <img src={RightTwig} id="daun" />
-            {/* <div className="breadcrumb mt-4" aria-label="breadcrumb">
+            <div className="breadcrumb mt-4" aria-label="breadcrumb">
               <ol className="breadcrumb">
                 <li className="breadcrumb-item">
-                  <Link to="./article" style="text-decoration: none; color: #3e37a9">
+                  <Link to="/article" className="link-breadcrumb">
                     Artikel
                   </Link>
                 </li>
-                <li className="breadcrumb-item active" aria-current="page">
+                <li className="current-breadcrumb breadcrumb-item active" aria-current="page">
                   Pendidikan
                 </li>
               </ol>
-            </div> */}
-            <img src={item.CoverPendidikan1} className="img-fluid my-4" />
+            </div>
+            <img src={item.cover} className="img-fluid " />
             <h2 className="title my-4">{item.title}</h2>
             <p>
               Bagaimana caranya penduduk mereka memiliki tingkat literasi yang sangat tinggi? Apa benar sekolah di Finlandia tidak mengadakan ujian dan tidak memberikan pekerjaan rumah? Bagaimana caranya negara kecil ini memiliki nilai luar
