@@ -165,7 +165,6 @@
 .class .card-thumbnail {
   object-fit: contain;
   overflow: hidden;
-  height: 247px;
 }
 
 .class .border-card {

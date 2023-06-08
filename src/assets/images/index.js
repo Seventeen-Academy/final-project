@@ -51,6 +51,9 @@ import BGCompleteCourse from "./bg-complete-course.png";
 import CompleteHTML from "./complete-html.png";
 import CoverPendidikan1 from "./cover-pendidikan1.png";
 import ImgAbout from "./img-about.png";
+import BGCardPrimary from "./bg-card-primary.png";
+import ProgressCSS from "./progress-css.png";
+import ProgressGIT from "./progress-git.png";
 
 export {
   BukuAgama,
@@ -105,4 +108,7 @@ export {
   CompleteHTML,
   CoverPendidikan1,
   ImgAbout,
+  BGCardPrimary,
+  ProgressCSS,
+  ProgressGIT,
 };

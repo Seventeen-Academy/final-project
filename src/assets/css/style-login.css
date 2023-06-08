@@ -21,6 +21,10 @@ body {
   background-size: 100% 100%;
 }
 
+.form-header {
+  width: 50%;
+}
+
 .form-header .welcome {
   font-family: "PoppinsMedium";
   font-size: 36px;

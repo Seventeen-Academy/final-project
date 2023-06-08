@@ -49,7 +49,6 @@
 .course-list .card-thumbnail {
   object-fit: contain;
   overflow: hidden;
-  height: 247px;
 }
 
 .course-list .border-card {

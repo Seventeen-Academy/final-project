@@ -11,12 +11,12 @@ const Profile = () => {
           <section className="profile">
             <Navbar />
             <div className="container mt-5">
-              <h1 className="title">Profile Saya</h1>
-              <div className="row">
+              <div className="row col-rev">
                 <div className="col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                  <h1 className="title poppins-medium">Profile Saya</h1>
                   <ProfileContent />
                 </div>
-                <div className="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                <div className="col-sm-12 col-md-3 col-lg-3 col-xl-3 my-5">
                   <SideBar />
                 </div>
               </div>

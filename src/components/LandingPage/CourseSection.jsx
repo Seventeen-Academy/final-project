@@ -17,7 +17,7 @@ const CourseSection = () => {
           <div className="row">
             <div className="col-md-4 mt-3">
               <div className="card-wrapper">
-                <div className="card card-thumbnail css-card border-card shadow-sm d-flex justify-content-center align-items-center">
+                <div className="card card-thumbnail border-card shadow-sm d-flex justify-content-center align-items-center">
                   <img src={CSSThumbnail} alt="" />
                 </div>
                 <div className="card-body p-2 shadow-sm bgr-light px-2">

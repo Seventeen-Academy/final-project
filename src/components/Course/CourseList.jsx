@@ -82,7 +82,7 @@ const CourseList = () => {
               {course.map((item, index) => (
                 <div className="col-md-4 mb-4" key={index}>
                   <div className="card-wrapper" id={"kotak-" + index}>
-                    <div className="card card-thumbnail js-card border-card shadow-sm d-flex justify-content-center align-items-center">
+                    <div className="card card-thumbnail border-card shadow-sm d-flex justify-content-center align-items-center">
                       <img src={item.thumbnail} alt="" />
                     </div>
                     <div className="card-body p-2 shadow-sm bgr-light px-2">

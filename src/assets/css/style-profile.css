@@ -37,8 +37,12 @@ body {
 }
 
 .profile .campus {
-  font-family: "Poppins-Medium";
+  font-family: "PoppinsMedium";
   font-size: 24px;
+}
+
+.profile .card-level {
+  width: 75%;
 }
 
 .profile .card-level {
@@ -48,7 +52,7 @@ body {
 }
 
 .profile .tagline-level {
-  font-family: "Poppins-Medium";
+  font-family: "PoppinsMedium";
   font-size: 20px;
   color: rgba(250, 248, 249, 0.75);
 }
@@ -82,7 +86,7 @@ body {
 }
 
 .profile .desc {
-  font-family: "Poppins-Medium";
+  font-family: "PoppinsMedium";
   font-size: 20px;
   color: #faf8f9;
 }

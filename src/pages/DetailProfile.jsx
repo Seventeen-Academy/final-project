@@ -7,7 +7,7 @@ import ChangePassword from "../components/DetailProfile/ChangePassword";
 function DetailProfile() {
   const [TabIdx, setTabIdx] = React.useState(0);
   return (
-    <main className="bg-grey pt-4">
+    <main className="bgr-body pt-4">
       <Navbar />
       <div className="container">
         <div className="fw-bold fs-2 py-4">
@@ -55,7 +55,6 @@ function DetailProfile() {
           Copyright © 2022 SEVA ALL RIGHTS RESERVED
         </div>
       </div>
-
     </main>
   );
 }

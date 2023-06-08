@@ -12,7 +12,7 @@ const Register = () => {
             <img
               src={BGLoginRegister}
               draggable="false"
-              className="img-fluid"
+              className="img-fluid bg-login-register"
             />
           </div>
           <div className="col-sm-6 form-register d-flex justify-content-center">
