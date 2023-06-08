@@ -29,8 +29,8 @@ const About = () => {
           <section className="benefit mt-5 px-2">
             <h4 className="title color-dark text-center">Tujuan SevA</h4>
             <h4 className="tag color-dark text-center">Mari mengetahui tujuan dan manfaat SevA dibuat</h4>
-            <div className="row">
-              <div className="col-md-3 my-2">
+            <div className="row justify-content-center">
+              <div className="col-md-4 my-2">
                 <div className="card mt-4 shadow-sm p-2">
                   <img src="https://i.ibb.co/ZM0w5Ft/Sword-Penghargaan.png" className="m-2 img-fluid" width="76" />
                   <div className="card-body">
@@ -39,7 +39,7 @@ const About = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-md-3 my-2">
+              <div className="col-md-4 my-2">
                 <div className="card mt-4 shadow-sm p-2">
                   <img src="https://i.ibb.co/JpDjVqX/Sword-Interaktif.png" className="m-2 img-fluid" width="76" />
                   <div className="card-body">
@@ -48,7 +48,7 @@ const About = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-md-3 my-2">
+              <div className="col-md-4 my-2">
                 <div className="card mt-4 shadow-sm p-2">
                   <img src="https://i.imgur.com/24bL4NQ.png" className="m-2 img-fluid" width="76" />
                   <div className="card-body">
@@ -57,7 +57,7 @@ const About = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-md-3 my-2">
+              <div className="col-md-4 my-2">
                 <div className="card mt-4 shadow-sm p-2">
                   <img src="https://i.ibb.co/kK6SCDS/Sword-Terjangkau.png" className="m-2 img-fluid" width="76" />
                   <div className="card-body">
@@ -66,7 +66,7 @@ const About = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-md-3 my-2">
+              <div className="col-md-4 my-2">
                 <div className="card mt-4 shadow-sm p-2">
                   <img src="https://i.ibb.co/pncKs2J/Sword-Perlindungan.png" className="m-2 img-fluid" width="76" />
                   <div className="card-body">
@@ -78,12 +78,12 @@ const About = () => {
             </div>
           </section>
           <section className="benefit mt-10 px-4">
-            <h4 className="title color-dark text-center">Pengembang SevA</h4>
+            <h4 className="title color-dark text-center mt-5">Pengembang SevA</h4>
             <h4 className="tag color-dark text-center">Mari mengenal pengembang platform pendidikan SevA</h4>
-            <div className="row">
+            <div className="row justify-content-center">
               <div className="col-md-3 my-2">
-                <div className="card border-0 bg-transparent" id="card">
-                  <img src="https://i.imgur.com/OKeLlh7.png" className="m-6 img-fluid mt-4 p-2" width="200" />
+                <div className="card border-0 bg-transparent text-center" id="card">
+                  <img src="https://i.imgur.com/OKeLlh7.png" className="mx-auto img-fluid mt-4 p-2" width="200" />
                   <div className="card-body">
                     <h5 className="title color-dark">Maulana Yusuf</h5>
                     <p className="paragraph color-subdark ">STIMK "AMIKBANDUNG"</p>
@@ -96,11 +96,10 @@ const About = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="col-md-3 my-2">
+              <div className="col-md-3 my-2">
               <div className="card border-0 bg-transparent" id="card">
-                <img src="https://i.imgur.com/p5PA14u.png" className="m-6 img-fluid mt-4 p-2" width="200" />
-                <div className="card-body">
+                <img src="https://i.imgur.com/p5PA14u.png" className="mx-auto img-fluid mt-4 p-2" width="200" />
+                <div className="card-body text-center">
                   <h5 className="title color-dark">Tasya Adila Putri</h5>
                   <p className="paragraph color-subdark ">Universitas Lampung</p>
                   <a href="#" className="text-decoration-none me-3">
@@ -114,8 +113,8 @@ const About = () => {
             </div>
             <div className="col-md-3 my-2">
               <div className="card border-0 bg-transparent" id="card">
-                <img src="https://i.imgur.com/vVC9u4Z.png" className="m-6 img-fluid mt-4 p-2" width="200" />
-                <div className="card-body">
+                <img src="https://i.imgur.com/vVC9u4Z.png" className="mx-auto img-fluid mt-4 p-2" width="200" />
+                <div className="card-body text-center">
                   <h5 className="title color-dark">Gema Kurnia Ramadhan</h5>
                   <p className="paragraph color-subdark ">Universitas Gunadarma</p>
                   <a href="#" className="text-decoration-none me-3">
@@ -129,8 +128,8 @@ const About = () => {
             </div>
             <div className="col-md-3 my-2">
               <div className="card border-0 bg-transparent" id="card">
-                <img src="https://i.imgur.com/OjMTNIU.png" className="m-6 img-fluid mt-4 p-2" width="200" />
-                <div className="card-body">
+                <img src="https://i.imgur.com/OjMTNIU.png" className="mx-auto img-fluid mt-4 p-2" width="200" />
+                <div className="card-body text-center">
                   <h5 className="title color-dark">Velani Nur Hanifah</h5>
                   <p className="paragraph color-subdark ">Universitas Negeri Yogyakarta</p>
                   <a href="#" className="text-decoration-none me-3">
@@ -141,6 +140,7 @@ const About = () => {
                   </a>
                 </div>
               </div>
+            </div>
             </div>
           </section>
         </div>
