@@ -7,7 +7,7 @@ function ProfileName() {
             width={90}
             height={90}
             className="avatar"
-            src="https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg?w\u003d2000"
+            src="/src/assets/images/profile-avatar.png"
             alt=""
           />
   

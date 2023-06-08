@@ -1,5 +1,4 @@
 import Navbar from "../components/GlobalComponent/Navbar";
-import Footer from "../components/GlobalComponent/Footer";
 import React from "react";
 import "../assets/css/style-detailprofile.css";
 import { FaUserTag, FaUser, FaSignOutAlt } from "react-icons/fa";
@@ -47,16 +46,16 @@ function DetailProfile() {
                 onClick={() => setTabIdx(2)}
                 role="button"
               >
-                <FaSignOutAlt /> Keluar
+                <FaSignOutAlt /> Sign-Out
               </div>
             </div>
           </div>
         </div>
         <div className="text-center pt-4">
-          Copyright © 2022 Seva All rights reserved.
+          Copyright © 2022 SEVA ALL RIGHTS RESERVED
         </div>
       </div>
-      <Footer />
+
     </main>
   );
 }
