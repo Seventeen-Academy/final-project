@@ -3,9 +3,65 @@ import "../assets/css/style-login.css";
 import { LockIcon, MailIcon } from "../assets/icons";
 import { BGLoginRegister } from "../assets/images";
 import { useState } from "react";
+import Axios from "axios";
+import Cookies from "universal-cookie";
+const ToolsCookies = new Cookies();
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
+
+  const login = async () => {
+    let email = document.querySelector("#email").value;
+    let password = document.querySelector("#password").value;
+
+    let config = {
+      url: `https://6451d89fbce0b0a0f736af1a.mockapi.io/users`,
+      method: `get`,
+      headers: {
+        "Content-type": "application/json",
+      },
+    };
+
+    try {
+      let getDataUsers = await Axios(config);
+      let dataUsers = getDataUsers.data;
+      let matchedUsers = null;
+
+      for (let i = 0; i < dataUsers.length; i++) {
+        if (dataUsers[i].email === email) {
+          matchedUsers = dataUsers[i];
+        }
+      }
+
+      if (!matchedUsers) {
+        throw new Error("Email is not match");
+      } else {
+        if (matchedUsers.password !== password) {
+          throw new Error("Email or password is not match");
+        } else {
+          var currentDate = new Date();
+          var expiresDate = new Date(
+            currentDate.getTime() + 24 * 60 * 60 * 1000
+          );
+          var expiresDateString = expiresDate.toISOString();
+
+          ToolsCookies.set("status_login", true, {
+            expires: expiresDate,
+          });
+          ToolsCookies.set("user_data", JSON.stringify(matchedUsers), {
+            expires: expiresDate,
+          });
+
+          console.log(ToolsCookies);
+
+          // if done, redirect ? like homepages
+          window.location.href = "/";
+        }
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -29,7 +85,7 @@ const Login = () => {
               <h4 className="paragraph color-subdark mt-3">
                 Petualangan baru telah menunggu untuk kamu jelajahi
               </h4>
-              <form className="form-content mt-5" id="formLogin">
+              <div className="form-content mt-5" id="formLogin">
                 <label htmlFor="email">Email</label>
                 <div className="input-group mb-3">
                   <span className="input-group-text" id="basic-addon1">
@@ -83,14 +139,14 @@ const Login = () => {
                 >
                   Lupa kata sandi?
                 </a>
-                <Link
-                  to="/account/profile"
+                <button
                   type="submit"
                   className="btn btn-login bgr-alternative color-light mt-3"
+                  onClick={login}
                 >
                   Masuk
-                </Link>
-              </form>
+                </button>
+              </div>
               <div className="row">
                 <div className="col mt-3 register d-flex justify-content-center">
                   <span className="register-label">Belum punya akun?</span>
