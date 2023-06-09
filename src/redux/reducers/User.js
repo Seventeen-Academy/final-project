@@ -4,6 +4,7 @@ const ToolsCookies = new Cookies();
 
 let getStatusAuth = ToolsCookies.get("status_login");
 let getDataAuth = ToolsCookies.get("user_data");
+// console.log(ToolsCookies.remove("status_login"));
 
 export const UserSlice = createSlice({
   name: "User",
