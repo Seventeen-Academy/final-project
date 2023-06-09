@@ -156,4 +156,39 @@
   .register .register-link {
     font-size: 12px;
   }
+
+  /* Detail Artikel */
+
+  #ranting {
+    display: none;
+  }
+
+  #daun {
+    display: none;
+  }
+
+  .detail-content {
+    width: 100vw !important;
+  }
+
+  /* award */
+
+  .award .card-award {
+    background-image: none;
+    background-color: #1b0d44;
+    border-radius: 8px;
+  }
+
+  .award .tagline-reward {
+    font-size: 14px !important;
+    margin-left: 0 !important;
+  }
+
+  .award .line-award {
+    width: 100% !important;
+  }
+
+  .award .award-status {
+    font-size: 32px !important;
+  }
 }
