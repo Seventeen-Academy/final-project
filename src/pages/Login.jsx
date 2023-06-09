@@ -2,8 +2,15 @@ import { Link } from "react-router-dom";
 import "../assets/css/style-login.css";
 import { LockIcon, MailIcon } from "../assets/icons";
 import { BGLoginRegister } from "../assets/images";
+import { useState } from "react";
 
 const Login = () => {
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
   return (
     <>
       <section className="login">
@@ -23,7 +30,7 @@ const Login = () => {
                 Petualangan baru telah menunggu untuk kamu jelajahi
               </h4>
               <form className="form-content mt-5" id="formLogin">
-                <label for="email">Email</label>
+                <label htmlFor="email">Email</label>
                 <div className="input-group mb-3">
                   <span className="input-group-text" id="basic-addon1">
                     <img src={MailIcon} alt="" />
@@ -40,13 +47,13 @@ const Login = () => {
                     Mohon masukkan email anda
                   </div>
                 </div>
-                <label for="email">Kata Sandi</label>
+                <label htmlFor="email">Kata Sandi</label>
                 <div className="input-group mb-3">
                   <span className="input-group-text" id="basic-addon1">
                     <img src={LockIcon} alt="" />
                   </span>
                   <input
-                    type="password"
+                    type={showPassword ? "text" : "password"}
                     name="password"
                     className="form-control"
                     placeholder="Masukkan Password"
@@ -56,11 +63,14 @@ const Login = () => {
                   <div className="input-group-append">
                     <span
                       className="input-group-text p-3"
-                      onclick="password_show_hide();"
+                      onClick={togglePasswordVisibility}
                       id="basic-addon1"
                     >
-                      <i className="fa fa-eye" id="show_eye"></i>
-                      <i className="fa fa-eye-slash d-none" id="hide_eye"></i>
+                      {showPassword ? (
+                        <i className="fa fa-eye-slash" id="hide_eye"></i>
+                      ) : (
+                        <i className="fa fa-eye" id="show_eye"></i>
+                      )}
                     </span>
                   </div>
                   <div className="invalid-feedback">

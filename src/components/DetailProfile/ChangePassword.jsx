@@ -5,12 +5,12 @@ function ChangePassword() {
   const [showComPass, setShowComPass] = React.useState(false);
   return (
     <div className=" border border-white rounded shadow bg-white p-4 my-2">
-      <div className=" fw-bold fs-3">Ubah Password</div>
-      <div className="title-password rounded py-2 px-3 my-2">
+      <div className=" fw-bold fs-3 poppins-medium">Ubah Password</div>
+      <div className="title-password poppins rounded py-2 px-3 my-2">
         Isi jika Anda ingin mengubah password.
       </div>
       <div className="input-wrapper">
-        <div>
+        <div className="poppins">
           Masukkan Password Baru <span style={{ color: "red" }}>*</span>
         </div>
         <div className="password-container">
@@ -26,7 +26,7 @@ function ChangePassword() {
         </div>
       </div>
       <div className="input-wrapper">
-        <div>
+        <div className="poppins">
           Konfirmasi Password Baru <span style={{ color: "red" }}>*</span>
         </div>
         <div className="password-container">
@@ -44,7 +44,7 @@ function ChangePassword() {
           </span>
         </div>
       </div>
-      <button className="btn-img rounded mt-4 py-2 px-4">
+      <button className="btn-img rounded poppins mt-4 py-2 px-4">
         Simpan Password
       </button>
     </div>

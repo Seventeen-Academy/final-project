@@ -2,8 +2,19 @@ import { Link } from "react-router-dom";
 import "../assets/css/style-register.css";
 import { LockIcon, MailIcon, PersonIcon } from "../assets/icons";
 import { BGLoginRegister } from "../assets/images";
+import { useState } from "react";
 
 const Register = () => {
+  const [showPassword1, setShowPassword1] = useState(false);
+  const [showPassword2, setShowPassword2] = useState(false);
+
+  const togglePasswordVisibility1 = () => {
+    setShowPassword1(!showPassword1);
+  };
+
+  const togglePasswordVisibility2 = () => {
+    setShowPassword2(!showPassword2);
+  };
   return (
     <>
       <section className="register">
@@ -25,7 +36,7 @@ const Register = () => {
                 Daftarkan dirimu untuk berpetualang dan menjadi seorang pahlawan
               </h4>
               <form className="form-content mt-3" id="formRegister">
-                <label for="name">Nama</label>
+                <label htmlFor="name">Nama</label>
                 <div className="input-group mb-2">
                   <span className="input-group-text" id="basic-addon1">
                     <img src={PersonIcon} alt="" />
@@ -40,7 +51,7 @@ const Register = () => {
                   />
                 </div>
 
-                <label for="email">Email</label>
+                <label htmlFor="email">Email</label>
                 <div className="input-group mb-3">
                   <span className="input-group-text" id="basic-addon1">
                     <img src={MailIcon} alt="" />
@@ -55,13 +66,13 @@ const Register = () => {
                   />
                 </div>
 
-                <label for="password-1">Kata Sandi</label>
+                <label htmlFor="password-1">Kata Sandi</label>
                 <div className="input-group mb-3">
                   <span className="input-group-text" id="basic-addon1">
                     <img src={LockIcon} alt="" />
                   </span>
                   <input
-                    type="password"
+                    type={showPassword1 ? "text" : "password"}
                     name="password-1"
                     id="password"
                     className="form-control"
@@ -71,22 +82,25 @@ const Register = () => {
                   <div className="input-group-append">
                     <span
                       className="input-group-text p-3"
-                      onclick="password_show_hide_1();"
+                      onClick={togglePasswordVisibility1}
                       id="basic-addon1"
                     >
-                      <i className="fa fa-eye" id="show_eye"></i>
-                      <i className="fa fa-eye-slash d-none" id="hide_eye"></i>
+                      {showPassword1 ? (
+                        <i className="fa fa-eye-slash" id="hide_eye"></i>
+                      ) : (
+                        <i className="fa fa-eye" id="show_eye"></i>
+                      )}
                     </span>
                   </div>
                 </div>
 
-                <label for="password-2">Konfirmasi Kata Sandi</label>
+                <label htmlFor="password-2">Konfirmasi Kata Sandi</label>
                 <div className="input-group mb-3">
                   <span className="input-group-text" id="basic-addon1">
                     <img src={LockIcon} alt="" />
                   </span>
                   <input
-                    type="password"
+                    type={showPassword2 ? "text" : "password"}
                     name="password-2"
                     id="password-2"
                     className="form-control"
@@ -96,11 +110,14 @@ const Register = () => {
                   <div className="input-group-append">
                     <span
                       className="input-group-text p-3"
-                      onclick="password_show_hide_2();"
+                      onClick={togglePasswordVisibility2}
                       id="basic-addon1"
                     >
-                      <i className="fa fa-eye" id="show_eye_2"></i>
-                      <i className="fa fa-eye-slash d-none" id="hide_eye_2"></i>
+                      {showPassword2 ? (
+                        <i className="fa fa-eye-slash" id="hide_eye_2"></i>
+                      ) : (
+                        <i className="fa fa-eye" id="show_eye_2"></i>
+                      )}
                     </span>
                   </div>
                 </div>

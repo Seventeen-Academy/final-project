@@ -26,7 +26,7 @@ function DetailProfile() {
           <div className="col col-sm-12 col-lg-4">
             <div className=" shadow border border-white rounded bg-white p-4 my-2 d-flex flex-lg-column justify-content-center">
               <div
-                className={`fw-bold dtl pointer  ${
+                className={`fw-bold dtl pointer poppins  ${
                   TabIdx === 0 ? "active" : ""
                 }`}
                 onClick={() => setTabIdx(0)}
@@ -35,14 +35,18 @@ function DetailProfile() {
                 <FaUser /> Detail Profile
               </div>
               <div
-                className={`fw-bold dtl  ${TabIdx === 1 ? "active" : ""}`}
+                className={`fw-bold dtl poppins  ${
+                  TabIdx === 1 ? "active" : ""
+                }`}
                 onClick={() => setTabIdx(1)}
                 role="button"
               >
                 <FaUserTag /> Akun
               </div>
               <div
-                className={`fw-bold dtl  ${TabIdx === 2 ? "active" : ""}`}
+                className={`fw-bold dtl poppins  ${
+                  TabIdx === 2 ? "active" : ""
+                }`}
                 onClick={() => setTabIdx(2)}
                 role="button"
               >
@@ -51,7 +55,7 @@ function DetailProfile() {
             </div>
           </div>
         </div>
-        <div className="text-center pt-4">
+        <div className="text-center pt-4 poppins-medium">
           Copyright © 2022 SEVA ALL RIGHTS RESERVED
         </div>
       </div>
