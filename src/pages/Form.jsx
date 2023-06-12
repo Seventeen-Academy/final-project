@@ -36,7 +36,7 @@ const Form = () => {
     e.preventDefault();
     ReportPOST(formData);
   };
-  
+
   return (
     <>
       <MainLayout>
@@ -47,14 +47,16 @@ const Form = () => {
               <h4 className="text-center my-4 bgr-primary p-3 rounded text-white poppins-medium">
                 Sampaikan Laporanmu
               </h4>
-              <form className="form-content" id="formReport">
+              <form className="form-content" id="formReport" onSubmit={Report}>
                 <div className="mb-3">
                   <label htmlFor="judul">Judul Laporan Anda</label>
                   <input
                     type="text"
                     className="form-control"
-                    name="judul"
+                    name="title"
                     id="judul"
+                    value={formData.title}
+                    onChange={handleChange}
                     placeholder="Masukkan Judul Laporan Anda"
                     autoComplete="off"
                     required
@@ -65,8 +67,10 @@ const Form = () => {
                   <input
                     type="text"
                     className="form-control"
-                    name="lokasi"
+                    name="location"
                     id="lokasi"
+                    value={formData.location}
+                    onChange={handleChange}
                     placeholder="Masukkan Lokasi Kejadian Anda"
                     autoComplete="off"
                     required
@@ -77,8 +81,10 @@ const Form = () => {
                   <input
                     type="date"
                     className="form-control"
-                    name="tanggal"
+                    name="date"
                     id="tanggal"
+                    value={formData.date}
+                    onChange={handleChange}
                     placeholder="Masukkan Tanggal Kejadian Anda"
                     autoComplete="off"
                     required
@@ -87,9 +93,11 @@ const Form = () => {
                 <div className="mb-3">
                   <label htmlFor="judul">Tuliskan Isi Laporan Anda</label>
                   <textarea
-                    name="isi"
+                    name="report"
                     className="form-control"
                     id="isi"
+                    value={formData.report}
+                    onChange={handleChange}
                     cols="30"
                     rows="10"
                     autoComplete="off"
