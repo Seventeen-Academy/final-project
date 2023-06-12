@@ -1,49 +1,59 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../assets/css/style-login.css";
 import { LockIcon, MailIcon } from "../assets/icons";
 import { BGLoginRegister } from "../assets/images";
-import { useState } from "react";
-import Axios from "axios";
+import { useEffect, useState } from "react";
 import Cookies from "universal-cookie";
+import { AuthLogin } from "../redux/actions/AuthAction";
+import { useDispatch, useSelector } from "react-redux";
+import Swal from "sweetalert2";
 const ToolsCookies = new Cookies();
 
 const Login = () => {
+  const { dataUser } = useSelector((state) => state.userReducer);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    dispatch(AuthLogin());
+  }, [dispatch]);
+
   const [showPassword, setShowPassword] = useState(false);
 
-  const login = async () => {
+  const login = async (e) => {
+    e.preventDefault();
+    let matchedUsers = [];
     let email = document.querySelector("#email").value;
     let password = document.querySelector("#password").value;
 
-    let config = {
-      url: `https://6451d89fbce0b0a0f736af1a.mockapi.io/users`,
-      method: `get`,
-      headers: {
-        "Content-type": "application/json",
-      },
-    };
-
     try {
-      let getDataUsers = await Axios(config);
-      let dataUsers = getDataUsers.data;
-      let matchedUsers = null;
-
-      for (let i = 0; i < dataUsers.length; i++) {
-        if (dataUsers[i].email === email) {
-          matchedUsers = dataUsers[i];
+      for (let i = 0; i < dataUser.length; i++) {
+        if (dataUser[i].email === email) {
+          matchedUsers = dataUser[i];
         }
       }
 
       if (!matchedUsers) {
-        throw new Error("Email is not match");
+        Swal.fire({
+          title: "Email atau password yang anda input salah!",
+          text: "Silahkan coba lagi",
+          icon: "error",
+          confirmButtonText: "OK",
+        });
       } else {
         if (matchedUsers.password !== password) {
-          throw new Error("Email or password is not match");
+          Swal.fire({
+            title: "Email atau password yang anda input salah!",
+            text: "Silahkan coba lagi",
+            icon: "error",
+            confirmButtonText: "OK",
+          });
         } else {
           var currentDate = new Date();
           var expiresDate = new Date(
             currentDate.getTime() + 24 * 60 * 60 * 1000
           );
-          var expiresDateString = expiresDate.toISOString();
+          // var expiresDateString = expiresDate.toISOString();
 
           ToolsCookies.set("status_login", true, {
             expires: expiresDate,
@@ -52,14 +62,11 @@ const Login = () => {
             expires: expiresDate,
           });
 
-          console.log(ToolsCookies);
-
-          // if done, redirect ? like homepages
-          window.location.href = "/";
+          navigate("/");
         }
       }
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   };
 
@@ -85,7 +92,11 @@ const Login = () => {
               <h4 className="paragraph color-subdark mt-3">
                 Petualangan baru telah menunggu untuk kamu jelajahi
               </h4>
-              <div className="form-content mt-5" id="formLogin">
+              <form
+                className="form-content mt-5"
+                id="formLogin"
+                onSubmit={login}
+              >
                 <label htmlFor="email">Email</label>
                 <div className="input-group mb-3">
                   <span className="input-group-text" id="basic-addon1">
@@ -142,11 +153,10 @@ const Login = () => {
                 <button
                   type="submit"
                   className="btn btn-login bgr-alternative color-light mt-3"
-                  onClick={login}
                 >
                   Masuk
                 </button>
-              </div>
+              </form>
               <div className="row">
                 <div className="col mt-3 register d-flex justify-content-center">
                   <span className="register-label">Belum punya akun?</span>

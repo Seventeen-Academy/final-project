@@ -2,42 +2,19 @@ import { Link, NavLink } from "react-router-dom";
 import "../../assets/css/style-navbar.css";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
+import Cookies from "universal-cookie";
 
 const Navbar = () => {
+  const ToolsCookies = new Cookies();
   const Store = useSelector((state) => state);
+  const StatusLogin = ToolsCookies.get("status_login");
+  const DataUser = ToolsCookies.get("user_data");
 
   useEffect(function () {
     const btnUser = document.getElementById("btnUser");
     const btnLogin = document.getElementById("btnLogin");
 
     let users = Store.userReducer;
-
-    if (users.authStatus) {
-      btnUser.classList.remove("btn-wrapper-none");
-      btnLogin.classList.add("btn-wrapper-none");
-
-      document.querySelector("#btnUser button a").text = users.profile.name;
-      document.querySelector("#btnUser button img").src = users.profile.img;
-    }
-
-    // btnUser.addEventListener("click", function () {
-    //   localStorage.removeItem("session");
-    //   window.location.reload();
-    // });
-
-    // function checkLoginButton() {
-    //   if (users.status) {
-    //     window.location.href = "../pages/form-laporan.html"
-    //   } else {
-    //     Swal.fire({
-    //       title: 'Anda Harus Login Terlebih Dahulu!',
-    //       icon: 'error',
-    //       confirmButtonText: 'OK'
-    //     }).then(function(){
-    //       window.location.href = "../pages/login.html"
-    //     })
-    //   }
-    // }
   }, []);
 
   return (
@@ -88,43 +65,45 @@ const Navbar = () => {
                       </NavLink>
                     </li>
                   </ul>
-                  <div
-                    className={`btn-wrapper btn-wrapper-none mx-auto d-flex align-items-center me-2 ${
-                      Store.userReducer.authStatus ? "" : "btn-wrapper-none"
-                    }`}
-                    id="btnLogin"
-                  >
-                    <div className="btn btn-signin">
-                      <Link to="/sign-in" className="navlink">
-                        SignIn
+                  {StatusLogin == undefined && (
+                    <div
+                      className={`btn-wrapper mx-auto d-flex align-items-center me-2 "
+                    `}
+                      id="btnLogin"
+                    >
+                      <div className="btn btn-signin">
+                        <Link to="/sign-in" className="navlink">
+                          SignIn
+                        </Link>
+                      </div>
+                      <Link
+                        to="/sign-up"
+                        className="btn btn-signup bgr-alternative color-light rounded"
+                      >
+                        SignUp
                       </Link>
                     </div>
-                    <Link
-                      to="/sign-up"
-                      className="btn btn-signup bgr-alternative color-light rounded"
+                  )}
+                  {StatusLogin && (
+                    <div
+                      className={`btn-wrapper-2 mx-auto d-flex align-items-center poppins-medium me-2 btn-wrapper-none" 
+                    `}
+                      id="btnUser"
                     >
-                      SignUp
-                    </Link>
-                  </div>
-                  <div
-                    className={`btn-wrapper-2 mx-auto d-flex align-items-center poppins-medium me-2 ${
-                      Store.userReducer.authStatus ? "btn-wrapper-none" : ""
-                    }`}
-                    id="btnUser"
-                  >
-                    <Link
-                      to="/account/profile"
-                      className="btn btn-profile bgr-alternative color-light rounded"
-                      id="btn-profile"
-                    >
-                      <img
-                        src="https://loremflickr.com/640/480/people"
-                        className="img-fluid me-2"
-                        width="30"
-                      />
-                      <span>{Store.userReducer?.userData?.name}</span>
-                    </Link>
-                  </div>
+                      <Link
+                        to="/account/profile"
+                        className="btn btn-profile bgr-alternative color-light rounded"
+                        id="btn-profile"
+                      >
+                        <img
+                          src={DataUser.img}
+                          className="img-fluid me-2"
+                          width="30"
+                        />
+                        <span>{DataUser.name}</span>
+                      </Link>
+                    </div>
+                  )}
                 </div>
               </div>
             </nav>

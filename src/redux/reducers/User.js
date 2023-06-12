@@ -1,39 +1,16 @@
-import { createSlice } from "@reduxjs/toolkit";
-import Cookies from "universal-cookie";
-const ToolsCookies = new Cookies();
+const initialStateApi = {
+  dataUser: null,
+};
 
-let getStatusAuth = ToolsCookies.get("status_login");
-let getDataAuth = ToolsCookies.get("user_data");
-// console.log(ToolsCookies.remove("status_login"));
+const userReducer = (state = initialStateApi, action) => {
+  if (action.type === "SET_DATA_USERS") {
+    return {
+      ...state,
+      dataUser: action.payload,
+    };
+  }
 
-export const UserSlice = createSlice({
-  name: "User",
-  initialState: {
-    autStatus: getStatusAuth ? true : false,
-    userData: getDataAuth ? getDataAuth : null,
-    token: null,
-    refreshToken: "",
-  },
-  reducers: {
-    setAuthStatus: (state, action) => {
-      state.authStatus += action.payload;
-    },
+  return state;
+};
 
-    setUserData: (state, action) => {
-      state.userData = action.payload;
-    },
-
-    setToken: (state, action) => {
-      state.token = action.payload;
-    },
-
-    setRefreshToken: (state, action) => {
-      state.refreshToken = action.payload;
-    },
-  },
-});
-
-export const { setAuthStatus, setUserData, setToken, setRefreshToken } =
-  UserSlice.actions;
-
-export default UserSlice.reducer;
+export default userReducer;

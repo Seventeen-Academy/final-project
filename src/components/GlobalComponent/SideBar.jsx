@@ -1,7 +1,17 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "../../assets/css/style-sidebar.css";
+import Cookies from "universal-cookie";
 
 const SideBar = () => {
+  const navigate = useNavigate();
+  const signOut = () => {
+    const ToolsCookies = new Cookies();
+    ToolsCookies.remove("user_data", { path: "/" });
+    ToolsCookies.remove("status_login", { path: "/" });
+
+    navigate("/");
+  };
+
   return (
     <>
       <div className="row">
@@ -46,12 +56,16 @@ const SideBar = () => {
                 <span className="ms-2">Penghargaan</span>
               </div>
             </NavLink>
-            <NavLink to="/" className="sidebar-link d-flex my-3">
+            <div
+              className="sidebar-link d-flex my-3 cursor-pointer"
+              role="button"
+              onClick={() => signOut()}
+            >
               <div className="sidebar-items ms-2">
                 <i className="fa fa-arrow-right-from-bracket fa-fw"></i>
                 <span className="ms-2">Sign-Out</span>
               </div>
-            </NavLink>
+            </div>
           </div>
         </div>
       </div>
