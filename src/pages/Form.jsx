@@ -2,8 +2,41 @@ import "../assets/css/style-laporan.css";
 import Navbar from "../components/GlobalComponent/Navbar";
 import Footer from "../components/GlobalComponent/Footer";
 import MainLayout from "../layout/MainLayout";
+import { useNavigate } from "react-router-dom";
+import Cookies from "universal-cookie";
+import { useEffect, useState } from "react";
+import { ReportPOST } from "../redux/actions/ReportAction";
 
 const Form = () => {
+  const navigate = useNavigate();
+  const ToolsCookies = new Cookies();
+  const StatusLogin = ToolsCookies.get("status_login");
+
+  useEffect(() => {
+    if (!StatusLogin || StatusLogin == undefined) {
+      navigate("/sign-in");
+    }
+  }, [navigate]);
+
+  const [formData, setFormData] = useState({
+    title: "",
+    location: "",
+    date: "",
+    report: "",
+  });
+
+  const handleChange = (event) => {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const Report = (e) => {
+    e.preventDefault();
+    ReportPOST(formData);
+  };
+  
   return (
     <>
       <MainLayout>
