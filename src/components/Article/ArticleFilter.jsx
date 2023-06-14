@@ -1,6 +1,19 @@
+import { useDispatch, useSelector } from "react-redux";
 import "../../assets/css/style-article.css";
+import { useEffect, useState } from "react";
 
-const ArticleFilter = () => {
+const ArticleFilter = ({ dataArticle, updateDataArticle }) => {
+  const [param, setParam] = useState(null);
+
+  useEffect(() => {
+    if (param) {
+      const filteredData = dataArticle.filter((item) => item.category === param);
+      updateDataArticle(filteredData);
+    } else {
+      updateDataArticle(dataArticle);
+    }
+  }, [param, dataArticle]);
+
   return (
     <>
       <section id="kategori" className="kategori">
@@ -8,20 +21,30 @@ const ArticleFilter = () => {
           <div className="row">
             <div className="col-lg-12 d-flex justify-content-center">
               <ul id="kategori-filters">
-                <li className="filter-active">
-                  <button className="btn btn-text">Semua</button>
+                <li className={param === null ? "filter-active" : ""}>
+                  <button className="btn btn-text" onClick={() => setParam(null)}>
+                    Semua
+                  </button>
                 </li>
-                <li>
-                  <button className="btn btn-text">Pendidikan</button>
+                <li className={param === "pendidikan" ? "filter-active" : ""}>
+                  <button className="btn btn-text" onClick={() => setParam("pendidikan")}>
+                    Pendidikan
+                  </button>
                 </li>
-                <li>
-                  <button className="btn btn-text">Perlindungan</button>
+                <li className={param === "perlindungan" ? "filter-active" : ""}>
+                  <button className="btn btn-text" onClick={() => setParam("perlindungan")}>
+                    Perlindungan
+                  </button>
                 </li>
-                <li>
-                  <button className="btn btn-text">Keterampilan</button>
+                <li className={param === "keterampilan" ? "filter-active" : ""}>
+                  <button className="btn btn-text" onClick={() => setParam("keterampilan")}>
+                    Keterampilan
+                  </button>
                 </li>
-                <li>
-                  <button className="btn btn-text">Minat Bakat</button>
+                <li className={param === "bakat" ? "filter-active" : ""}>
+                  <button className="btn btn-text" onClick={() => setParam("bakat")}>
+                    Minat Bakat
+                  </button>
                 </li>
               </ul>
             </div>
