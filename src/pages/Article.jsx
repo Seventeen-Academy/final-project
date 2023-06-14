@@ -5,7 +5,7 @@ import ArticleList from "../components/Article/ArticleList";
 import Footer from "../components/GlobalComponent/Footer";
 import Navbar from "../components/GlobalComponent/Navbar";
 import MainLayout from "../layout/MainLayout";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { GetArticle } from "../redux/actions/ArticleAction";
 
