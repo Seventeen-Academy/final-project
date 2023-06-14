@@ -5,15 +5,31 @@ import ArticleList from "../components/Article/ArticleList";
 import Footer from "../components/GlobalComponent/Footer";
 import Navbar from "../components/GlobalComponent/Navbar";
 import MainLayout from "../layout/MainLayout";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { GetArticle } from "../redux/actions/ArticleAction";
 
 const Article = () => {
+  const { dataArticle, oriDataArticle } = useSelector((state) => state.articleReducer);
+  const dispatch = useDispatch();
+
+  const updateDataArticle = (filteredData) => {
+    dispatch({ type: "UPDATE_DATA_ARTICLE", payload: filteredData });
+  };
+
+  useEffect(() => {
+    if (dataArticle === null) {
+      dispatch(GetArticle());
+    }
+  }, [dispatch, dataArticle]);
+
   return (
     <>
       <MainLayout>
         <div className="container">
           <Navbar />
-          <ArticleFilter />
-          <ArticleList />
+          <ArticleFilter dataArticle={oriDataArticle} updateDataArticle={updateDataArticle} />
+          <ArticleList dataArticle={dataArticle} />
           {/* <ArticlePagination /> */}
         </div>
         <Footer />
