@@ -3,8 +3,19 @@ import CourseList from "../components/Course/CourseList";
 import Navbar from "../components/GlobalComponent/Navbar";
 import Footer from "../components/GlobalComponent/Footer";
 import MainLayout from "../layout/MainLayout";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { GetCourse } from "../redux/actions/CourseAction";
 
 const Course = () => {
+  const { dataCourse } = useSelector((state) => state.courseReducer);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (dataCourse === null) {
+      dispatch(GetCourse());
+    }
+  }, [dispatch, dataCourse]);
   return (
     <>
       <MainLayout>
@@ -25,7 +36,7 @@ const Course = () => {
                     </h3>
                   </div>
 
-                  <CourseList />
+                  <CourseList dataCourse={dataCourse} />
                 </div>
               </div>
             </div>

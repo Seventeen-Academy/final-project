@@ -3,7 +3,6 @@ import ReactHtmlParser from "react-html-parser";
 import { Link } from "react-router-dom";
 
 const DetailArticleContent = ({ article }) => {
-  console.log(article);
   return (
     <>
       <div className="container detail-content w-50">
@@ -17,7 +16,10 @@ const DetailArticleContent = ({ article }) => {
                     Artikel
                   </Link>
                 </li>
-                <li className="current-breadcrumb breadcrumb-item active" aria-current="page">
+                <li
+                  className="current-breadcrumb breadcrumb-item active"
+                  aria-current="page"
+                >
                   Pendidikan
                 </li>
               </ol>
