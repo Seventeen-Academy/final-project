@@ -32,9 +32,7 @@ const Router = () => {
         <Route path="/payment" element={<Payment />} />
         <Route path="/form" element={<Form />} />
         <Route path="/detailkelas" element={<DetailKelas />} />
-        <Route path="/article/detailarticle" element={<DetailArticle />} />
-
-
+        <Route path="/article/detailarticle/:param" element={<DetailArticle />} />
 
         {/* ========= Sidebar ========= */}
         <Route path="/account/dashboard" element={<Dashboard />} />
@@ -42,8 +40,7 @@ const Router = () => {
         <Route path="/account/transaction" element={<Transaction />} />
         <Route path="/account/profile" element={<Profile />} />
         <Route path="/account/award" element={<Award />} />
-        <Route path="/account/detailprofile" element={<DetailProfile/>} />
-
+        <Route path="/account/detailprofile" element={<DetailProfile />} />
 
         {/* ====== 404 NotFound ======= */}
         <Route path="*" element={<NotFound />} />
