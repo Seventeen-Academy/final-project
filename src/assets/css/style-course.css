@@ -71,6 +71,11 @@
 .lesson {
   font-size: 12px;
   font-family: "PoppinsLight";
+  color: #121212;
+}
+
+.lesson:hover {
+  color: #121212;
 }
 
 .price-class-card {

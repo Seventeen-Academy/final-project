@@ -18,6 +18,7 @@ import Award from "../../pages/AccountMenu/Award";
 import NotFound from "../../pages/NotFound";
 import DetailProfile from "../../pages/DetailProfile";
 import JoinCourse from "../../pages/JoinCourse";
+import UnderDestruction from "../../pages/UnderDestruction";
 
 const Router = () => {
   return (
@@ -47,6 +48,7 @@ const Router = () => {
         <Route path="/account/detailprofile" element={<DetailProfile />} />
         {/* ====== 404 NotFound ======= */}
         <Route path="*" element={<NotFound />} />
+        <Route path="underdestruction" element={<UnderDestruction />} />
       </Routes>
     </>
   );

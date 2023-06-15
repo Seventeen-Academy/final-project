@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ChangeProfile } from "../../redux/actions/AuthAction";
 import Swal from "sweetalert2";
+import { Avatar } from "../../assets/images";
 
 function ProfileName({ data, cookie, onProfileUpdate }) {
   const [formData, setFormData] = useState({
@@ -39,13 +40,7 @@ function ProfileName({ data, cookie, onProfileUpdate }) {
     <div className=" border border-white rounded shadow bg-white p-4 my-2">
       <div className=" fw-bold fs-3 poppins-medium">Foto Profile</div>
       <div className="d-flex gap-3 align-items-center py-4">
-        <img
-          width={90}
-          height={90}
-          className="avatar"
-          src="/src/assets/images/profile-avatar.png"
-          alt=""
-        />
+        <img width={90} height={90} className="avatar" src={Avatar} alt="" />
 
         <div>
           <button className="btn-img rounded py-1 px-2 poppins">
