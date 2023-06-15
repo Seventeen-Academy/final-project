@@ -1,8 +1,54 @@
+import { Link } from "react-router-dom";
 import "../assets/css/style-register.css";
 import { LockIcon, MailIcon, PersonIcon } from "../assets/icons";
 import { BGLoginRegister } from "../assets/images";
+import { useState } from "react";
+import { AuthRegister } from "../redux/actions/AuthAction";
+import Swal from "sweetalert2";
 
 const Register = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    password: "",
+    email: "",
+  });
+
+  const handleChange = (event) => {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const [showPassword1, setShowPassword1] = useState(false);
+  const [showPassword2, setShowPassword2] = useState(false);
+
+  const togglePasswordVisibility1 = () => {
+    setShowPassword1(!showPassword1);
+  };
+
+  const togglePasswordVisibility2 = () => {
+    setShowPassword2(!showPassword2);
+  };
+
+  const SignUp = (e) => {
+    e.preventDefault();
+    const password = document.querySelector("#password").value;
+    const confirmPassword = document.querySelector("#confirmPassword").value;
+
+    if (password !== confirmPassword) {
+      console.log(password, confirmPassword);
+      Swal.fire({
+        title: "Password tidak sama!",
+        text: "Silahkan ketik password dengan benar dan sesuai",
+        icon: "error",
+        confirmButtonText: "OK",
+      });
+      return 0;
+    }
+    AuthRegister(formData);
+  };
+
   return (
     <>
       <section className="register">
@@ -11,7 +57,7 @@ const Register = () => {
             <img
               src={BGLoginRegister}
               draggable="false"
-              className="img-fluid"
+              className="img-fluid bg-login-register"
             />
           </div>
           <div className="col-sm-6 form-register d-flex justify-content-center">
@@ -23,8 +69,12 @@ const Register = () => {
               <h4 className="paragraph color-subdark mt-3">
                 Daftarkan dirimu untuk berpetualang dan menjadi seorang pahlawan
               </h4>
-              <form className="form-content mt-3" id="formRegister">
-                <label for="name">Nama</label>
+              <form
+                className="form-content mt-3"
+                id="formRegister"
+                onSubmit={SignUp}
+              >
+                <label htmlFor="name">Nama</label>
                 <div className="input-group mb-2">
                   <span className="input-group-text" id="basic-addon1">
                     <img src={PersonIcon} alt="" />
@@ -35,11 +85,13 @@ const Register = () => {
                     className="form-control"
                     placeholder="Masukkan Nama Lengkap"
                     id="name"
+                    value={formData.name}
+                    onChange={handleChange}
                     required
                   />
                 </div>
 
-                <label for="email">Email</label>
+                <label htmlFor="email">Email</label>
                 <div className="input-group mb-3">
                   <span className="input-group-text" id="basic-addon1">
                     <img src={MailIcon} alt="" />
@@ -50,44 +102,51 @@ const Register = () => {
                     className="form-control"
                     placeholder="Masukkan Email"
                     id="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     required
                   />
                 </div>
 
-                <label for="password-1">Kata Sandi</label>
+                <label htmlFor="password-1">Kata Sandi</label>
                 <div className="input-group mb-3">
                   <span className="input-group-text" id="basic-addon1">
                     <img src={LockIcon} alt="" />
                   </span>
                   <input
-                    type="password"
-                    name="password-1"
+                    type={showPassword1 ? "text" : "password"}
+                    name="password"
                     id="password"
                     className="form-control"
                     placeholder="Masukkan Password"
+                    value={formData.password}
+                    onChange={handleChange}
                     required
                   />
                   <div className="input-group-append">
                     <span
                       className="input-group-text p-3"
-                      onclick="password_show_hide_1();"
+                      onClick={togglePasswordVisibility1}
                       id="basic-addon1"
                     >
-                      <i className="fa fa-eye" id="show_eye"></i>
-                      <i className="fa fa-eye-slash d-none" id="hide_eye"></i>
+                      {showPassword1 ? (
+                        <i className="fa fa-eye-slash" id="hide_eye"></i>
+                      ) : (
+                        <i className="fa fa-eye" id="show_eye"></i>
+                      )}
                     </span>
                   </div>
                 </div>
 
-                <label for="password-2">Konfirmasi Kata Sandi</label>
+                <label htmlFor="confirmPassword">Konfirmasi Kata Sandi</label>
                 <div className="input-group mb-3">
                   <span className="input-group-text" id="basic-addon1">
                     <img src={LockIcon} alt="" />
                   </span>
                   <input
-                    type="password"
-                    name="password-2"
-                    id="password-2"
+                    type={showPassword2 ? "text" : "password"}
+                    name="confirmPassword"
+                    id="confirmPassword"
                     className="form-control"
                     placeholder="Masukkan Password"
                     required
@@ -95,11 +154,14 @@ const Register = () => {
                   <div className="input-group-append">
                     <span
                       className="input-group-text p-3"
-                      onclick="password_show_hide_2();"
+                      onClick={togglePasswordVisibility2}
                       id="basic-addon1"
                     >
-                      <i className="fa fa-eye" id="show_eye_2"></i>
-                      <i className="fa fa-eye-slash d-none" id="hide_eye_2"></i>
+                      {showPassword2 ? (
+                        <i className="fa fa-eye-slash" id="hide_eye_2"></i>
+                      ) : (
+                        <i className="fa fa-eye" id="show_eye_2"></i>
+                      )}
                     </span>
                   </div>
                 </div>
@@ -113,9 +175,9 @@ const Register = () => {
               <div className="row">
                 <div className="col mt-3 register d-flex justify-content-center">
                   <span className="register-label">Sudah punya akun?</span>
-                  <a href="../pages/login.html" className="register-link ms-2">
+                  <Link to="/sign-in" className="register-link ms-2">
                     Masuk Sekarang
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -14,8 +14,8 @@ import {
 const Learning = () => {
   return (
     <>
-      <section className="learning mt-3">
-        <div className="container bgr-primary p-md-5 color-light">
+      <section className="learning mt-3 px-3">
+        <div className="bgr-primary p-md-5 color-light bg-learning">
           <div className="row">
             <div className="col-md-5 my-auto">
               <h2 className="tag color-sublight">P E M B E L A J A R A N</h2>
