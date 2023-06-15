@@ -1,4 +1,35 @@
-function ProfileName() {
+import { useState } from "react";
+import { ChangeProfile } from "../../redux/actions/AuthAction";
+
+function ProfileName({data, cookie, onProfileUpdate}) {
+  const [formData, setFormData] = useState({
+    name: data.name,
+    email: data.email,
+  });
+
+  const handleChange = (event) => {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+
+  async function btnSubmit(e) {
+    e.preventDefault();
+    try {
+      const result = await ChangeProfile(formData, data.id);
+      // Handle the result here
+      cookie.remove("user_data", { path: "/" });
+      cookie.set('user_data', result);
+      if (typeof onProfileUpdate === "function") {
+        onProfileUpdate();
+      }
+    } catch (error) {
+      // Handle any errors
+      console.log(error);
+    }
+  }
   return (
     <div className=" border border-white rounded shadow bg-white p-4 my-2">
       <div className=" fw-bold fs-3 poppins-medium">Foto Profile</div>
@@ -30,6 +61,8 @@ function ProfileName() {
           name="name"
           className="w-100 rounded p-2"
           placeholder="Nama Lengkap"
+          value={formData.name == "" ? data.name : formData.name}
+          onChange={handleChange}
         />
       </div>
       <div className="input-wrapper">
@@ -52,9 +85,12 @@ function ProfileName() {
           placeholder="Email"
           name="email"
           className="w-100 rounded p-2"
+          disabled
+          value={formData.email == "" ? data.email : formData.email}
+          onChange={handleChange}
         />
       </div>
-      <button className="btn-img poppins rounded mt-4 py-2 px-2">
+      <button className="btn-img poppins rounded mt-4 py-2 px-2" onClick={btnSubmit}>
         Simpan Perubahan
       </button>
     </div>
