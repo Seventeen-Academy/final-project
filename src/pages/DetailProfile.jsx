@@ -5,6 +5,7 @@ import { FaUserTag, FaUser, FaSignOutAlt } from "react-icons/fa";
 import ProfileName from "../components/DetailProfile/ProfileName";
 import ChangePassword from "../components/DetailProfile/ChangePassword";
 import Cookies from "universal-cookie";
+import { Link } from "react-router-dom";
 function DetailProfile() {
   const ToolsCookies = new Cookies();
   const StatusLogin = ToolsCookies.get("status_login");
@@ -61,7 +62,7 @@ function DetailProfile() {
                 onClick={() => setTabIdx(2)}
                 role="button"
               >
-                <FaSignOutAlt /> Sign-Out
+              <Link to="/account/profile"><FaSignOutAlt /> Sign-Out </Link> 
               </div>
             </div>
           </div>
