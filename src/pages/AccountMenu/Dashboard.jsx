@@ -2,7 +2,6 @@ import Navbar from "../../components/GlobalComponent/Navbar";
 import SideBar from "../../components/GlobalComponent/SideBar";
 import MainLayout from "../../layout/MainLayout";
 import "../../assets/css/style-dashboard.css";
-import Activity from "../../components/Dashboard/Activity";
 
 const Dashboard = () => {
   return (

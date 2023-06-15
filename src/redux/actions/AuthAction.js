@@ -34,8 +34,6 @@ export const AuthRegister = (datas) => {
   return axios
     .post(baseurl + "/users", data, config)
     .then((response) => {
-      //   const result = response.data;
-      //   return result;
       Swal.fire({
         title: "Yeayy, Daftar Berhasil!",
         text: "Ayo Login dan Selamat berpetualang, pahlawan!",
@@ -44,6 +42,29 @@ export const AuthRegister = (datas) => {
       }).then(function () {
         window.location.href = "/sign-in";
       });
+    })
+    .catch((error) => {
+      console.log(error);
+      throw error;
+    });
+};
+
+export const ChangeProfile = (datas, id) => {
+  let data = JSON.stringify({
+    email: datas.email,
+    name: datas.name,
+  });
+  let config = {
+    maxBodyLength: Infinity,
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+  return axios
+    .put(baseurl + `/users/${id}`, data, config)
+    .then((response) => {
+      const result = response.data;
+      return result;
     })
     .catch((error) => {
       console.log(error);

@@ -1,5 +1,4 @@
 import { RightTwig, LeftTwig } from "../../assets/images";
-import ReactHtmlParser from "react-html-parser";
 import { Link } from "react-router-dom";
 
 const DetailArticleContent = ({ article }) => {
@@ -26,7 +25,10 @@ const DetailArticleContent = ({ article }) => {
             </div>
             <img src={article.coverDetail} className="img-fluid " />
             <h2 className="title my-4">{article.title}</h2>
-            {ReactHtmlParser(article.articleDetail)}
+            {/* {ReactHtmlParser(article.articleDetail)} */}
+            <div
+              dangerouslySetInnerHTML={{ __html: article.articleDetail }}
+            ></div>
             <img src={LeftTwig} alt="" id="ranting" />
           </div>
         )}

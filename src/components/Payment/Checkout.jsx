@@ -1,4 +1,20 @@
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
+
 const Checkout = ({ data }) => {
+  const navigate = useNavigate();
+
+  const checkoutButton = () => {
+    Swal.fire({
+      title: "Yeayy, Pembayaran Berhasil!",
+      text: "Ayo mulai berpetualang, pahlawan!",
+      icon: "success",
+      confirmButtonText: "OK",
+    }).then(function () {
+      
+      navigate("/joincourse");
+    });
+  };
   return (
     <>
       {data && (
@@ -14,7 +30,10 @@ const Checkout = ({ data }) => {
               {data.price < 1 ? "Gratis" : "Rp " + data.price + ",-"}
             </h3>
           </div>
-          <button className="btn btn-checkout bgr-alternative color-light poppins-medium w-100">
+          <button
+            className="btn btn-checkout bgr-alternative color-light poppins-medium w-100"
+            onClick={() => checkoutButton()}
+          >
             Bayar
           </button>
           <button className="btn btn-link w-100 text-decoration-none color-alternative poppins-medium my-2">
@@ -25,5 +44,6 @@ const Checkout = ({ data }) => {
     </>
   );
 };
+
 
 export default Checkout;
