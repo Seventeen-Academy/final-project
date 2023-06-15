@@ -1,8 +1,4 @@
-import { HTMLPayment } from "../../assets/images";
-import { useEffect, useState } from "react";
 import "../../assets/css/style-payment.css";
-import { useDispatch, useSelector } from "react-redux";
-import HtmlParser from "react-html-parser";
 
 const CardCourse = ({ data }) => {
   return (
@@ -39,9 +35,12 @@ const CardCourse = ({ data }) => {
                     className="accordion-collapse collapse"
                     aria-labelledby="panelsStayOpen-headingOne"
                   >
-                    <div className="accordion-body poppins-light">
+                    {/* <div className="accordion-body poppins-light">
                       {HtmlParser(data.summary)}
-                    </div>
+                    </div> */}
+                    <div
+                      dangerouslySetInnerHTML={{ __html: data.summary }}
+                    ></div>
                   </div>
                 </div>
               </div>

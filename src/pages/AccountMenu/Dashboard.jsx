@@ -2,7 +2,6 @@ import Navbar from "../../components/GlobalComponent/Navbar";
 import SideBar from "../../components/GlobalComponent/SideBar";
 import MainLayout from "../../layout/MainLayout";
 import "../../assets/css/style-dashboard.css";
-import Activity from "../../components/Dashboard/Activity";
 
 const Dashboard = () => {
   return (
@@ -127,9 +126,7 @@ const Dashboard = () => {
                     <h1 className="header-complete-course mb-3">
                       Aktifitas Belajar
                     </h1>
-                    <div className="line-chart-1">
-                      <Activity />
-                    </div>
+                    <div className="line-chart-1">{/* <Activity /> */}</div>
                   </section>
                 </div>
                 <div className="col-12 py-2">

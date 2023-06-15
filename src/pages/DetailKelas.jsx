@@ -12,7 +12,6 @@ import Navbar from "../components/GlobalComponent/Navbar";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { GetCourse } from "../redux/actions/CourseAction";
 import { useDispatch, useSelector } from "react-redux";
-import HtmlParser from "react-html-parser";
 
 const DetailKelas = () => {
   const navigate = useNavigate();
@@ -183,33 +182,24 @@ const DetailKelas = () => {
                 <br />
                 <p>{data.description}</p>
 
-                {HtmlParser(data.summary)}
-
-                {/* <p>Apa yang akan kita pelajari</p>
-
-                <ol>
-                  <li>Struktur Dokumen HTML</li>
-                  <li>HTML Tag, Element, Attribute & Comment</li>
-                  <li>HTML Tag Untuk Menampilkan Teks</li>
-                  <li>HTML Tag Untuk Multimedia</li>
-                  <li>HTML Tag Untuk Tabel</li>
-                  <li>HTML Tag Untuk Formulir</li>
-                  <li>HTML Tag Untuk Membagi Layout Website</li>
-                </ol> */}
+                {/* {HtmlParser(data.summary)} */}
+                <div dangerouslySetInnerHTML={{ __html: data.summary }}></div>
               </div>
               <div className="container border border-white rounded bg-white p-4 my-2">
                 <div className="fw-bold fs-3">Materi yang kamu pelajari</div>
 
                 <br />
 
-                <ol>{HtmlParser(data.lesson)}</ol>
+                <ol dangerouslySetInnerHTML={{ __html: data.lesson }}></ol>
+                {/* <ol>{HtmlParser(data.lesson)}</ol> */}
               </div>
               <div className="container border border-white rounded bg-white p-4 my-2">
                 <div className="fw-bold fs-3">Persiapan kelas</div>
 
                 <br />
 
-                <ul>{HtmlParser(data.preparation)}</ul>
+                <ul dangerouslySetInnerHTML={{ __html: data.preparation }}></ul>
+                {/* <ul>{HtmlParser(data.preparation)}</ul> */}
               </div>
             </div>
           </div>
