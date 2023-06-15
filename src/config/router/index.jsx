@@ -17,6 +17,7 @@ import Transaction from "../../pages/AccountMenu/Transaction";
 import Award from "../../pages/AccountMenu/Award";
 import NotFound from "../../pages/NotFound";
 import DetailProfile from "../../pages/DetailProfile";
+import JoinCourse from "../../pages/JoinCourse";
 
 const Router = () => {
   return (
@@ -31,6 +32,7 @@ const Router = () => {
         <Route path="/sign-up" element={<Register />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/form" element={<Form />} />
+        <Route path="/joincourse" element={<JoinCourse />} />
         <Route path="/course/detailcourse/:param" element={<DetailKelas />} />
         <Route
           path="/article/detailarticle/:param"
