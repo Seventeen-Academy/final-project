@@ -34,7 +34,7 @@ const CourseList = ({ dataCourse }) => {
                           <div className="row">
                             <div className="col-6">
                               <div className="container bgr-secondary lesson-wrapper d-flex ms-1">
-                                <i class="fa fa-book my-auto"></i>
+                                <i className="fa fa-book my-auto"></i>
                                 <h4 className="lesson p-2 my-auto">
                                   {item.lessonBox}
                                 </h4>
@@ -42,14 +42,16 @@ const CourseList = ({ dataCourse }) => {
                             </div>
                             <div className="col-6 d-flex justify-content-end">
                               <h4 className="price-class-card color-alternative me-2 my-auto">
-                                {item.price}
+                                {item.price < 1
+                                  ? "Gratis"
+                                  : "Rp. " + item.price}
                               </h4>
                             </div>
                           </div>
                           <div className="card-footer px-2 bgr-light mb-2">
                             <hr />
                             <Link
-                              to="/detailkelas"
+                              to={"/course/detailcourse/" + item.id}
                               className="btn bgr-alternative btn-class color-light"
                             >
                               Selengkapnya
