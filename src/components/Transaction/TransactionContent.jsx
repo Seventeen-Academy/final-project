@@ -69,15 +69,9 @@ const TransactionContent = () => {
                         <h3 className="detail-header">Harga</h3>
                       </div>
                       <div className="transaction-detail-body d-flex justify-content-between">
-                        <h3 className="detail-body">
-                          <strong>{item.className}</strong>
-                        </h3>
-                        <h3 className="detail-body">
-                          <strong>{item.date}</strong>
-                        </h3>
-                        <h3 className="detail-body">
-                          <strong>{item.price}</strong>
-                        </h3>
+                        <h3 className="detail-body">{item.className}</h3>
+                        <h3 className="detail-body">{item.date}</h3>
+                        <h3 className="detail-body">{item.price}</h3>
                       </div>
                     </div>
                   </div>

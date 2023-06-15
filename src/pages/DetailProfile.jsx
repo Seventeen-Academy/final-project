@@ -15,12 +15,12 @@ function DetailProfile() {
 
   // Function to handle the refresh
   const handleRefreshNavbar = () => {
-    setRefreshNavbar(!refreshNavbar); 
+    setRefreshNavbar(!refreshNavbar);
   };
 
   return (
     <main className="bgr-body pt-4">
-      <Navbar refresh={setRefreshNavbar}  />
+      <Navbar refresh={setRefreshNavbar} />
       <div className="container">
         <div className="fw-bold fs-2 py-4">
           {TabIdx === 0 ? "Detail Profile" : "Akun"}
@@ -28,7 +28,11 @@ function DetailProfile() {
         <div className="d-flex gap-4 flex-lg-row flex-column-reverse">
           <div className="col col-sm-12  col-lg-8">
             {TabIdx === 0 ? (
-              <ProfileName data={DataUser} cookie={ToolsCookies} onProfileUpdate={handleRefreshNavbar}/>
+              <ProfileName
+                data={DataUser}
+                cookie={ToolsCookies}
+                onProfileUpdate={handleRefreshNavbar}
+              />
             ) : TabIdx === 1 ? (
               <ChangePassword />
             ) : (
@@ -62,7 +66,9 @@ function DetailProfile() {
                 onClick={() => setTabIdx(2)}
                 role="button"
               >
-              <Link to="/account/profile"><FaSignOutAlt /> Sign-Out </Link> 
+                <Link to="/account/profile">
+                  <FaSignOutAlt /> Kembali{" "}
+                </Link>
               </div>
             </div>
           </div>

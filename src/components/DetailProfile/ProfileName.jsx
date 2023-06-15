@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { ChangeProfile } from "../../redux/actions/AuthAction";
+import Swal from "sweetalert2";
 
-function ProfileName({data, cookie, onProfileUpdate}) {
+function ProfileName({ data, cookie, onProfileUpdate }) {
   const [formData, setFormData] = useState({
     name: data.name,
     email: data.email,
@@ -14,16 +15,20 @@ function ProfileName({data, cookie, onProfileUpdate}) {
     });
   };
 
-
   async function btnSubmit(e) {
     e.preventDefault();
     try {
       const result = await ChangeProfile(formData, data.id);
       // Handle the result here
       cookie.remove("user_data", { path: "/" });
-      cookie.set('user_data', result);
+      cookie.set("user_data", result);
       if (typeof onProfileUpdate === "function") {
         onProfileUpdate();
+        Swal.fire({
+          title: "Yeayy, Profile Berhasil Diubah!",
+          icon: "success",
+          confirmButtonText: "OK",
+        });
       }
     } catch (error) {
       // Handle any errors
@@ -67,17 +72,6 @@ function ProfileName({data, cookie, onProfileUpdate}) {
       </div>
       <div className="input-wrapper">
         <div className="poppins">
-          Username <span style={{ color: "red" }}>*</span>
-        </div>
-        <input
-          type="text"
-          name="username"
-          placeholder="Username"
-          className="w-100 rounded p-2"
-        />
-      </div>
-      <div className="input-wrapper">
-        <div className="poppins">
           Email <span style={{ color: "red" }}>*</span>
         </div>
         <input
@@ -90,7 +84,10 @@ function ProfileName({data, cookie, onProfileUpdate}) {
           onChange={handleChange}
         />
       </div>
-      <button className="btn-img poppins rounded mt-4 py-2 px-2" onClick={btnSubmit}>
+      <button
+        className="btn-img poppins rounded mt-4 py-2 px-2"
+        onClick={btnSubmit}
+      >
         Simpan Perubahan
       </button>
     </div>

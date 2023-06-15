@@ -1,4 +1,5 @@
 import axios from "axios";
+import Swal from "sweetalert2";
 
 const baseurl = "https://6451d89fbce0b0a0f736af1a.mockapi.io";
 
@@ -33,8 +34,14 @@ export const AuthRegister = (datas) => {
   return axios
     .post(baseurl + "/users", data, config)
     .then((response) => {
-      const result = response.data;
-      return result;
+      Swal.fire({
+        title: "Yeayy, Daftar Berhasil!",
+        text: "Ayo Login dan Selamat berpetualang, pahlawan!",
+        icon: "success",
+        confirmButtonText: "OK",
+      }).then(function () {
+        window.location.href = "/sign-in";
+      });
     })
     .catch((error) => {
       console.log(error);
