@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import LandingPage from "../../pages/LandingPage";
 import Register from "../../pages/Register";
 import Course from "../../pages/Course";
@@ -17,6 +17,8 @@ import Transaction from "../../pages/AccountMenu/Transaction";
 import Award from "../../pages/AccountMenu/Award";
 import NotFound from "../../pages/NotFound";
 import DetailProfile from "../../pages/DetailProfile";
+import JoinCourse from "../../pages/JoinCourse";
+import UnderDestruction from "../../pages/UnderDestruction";
 
 const Router = () => {
   return (
@@ -31,12 +33,12 @@ const Router = () => {
         <Route path="/sign-up" element={<Register />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/form" element={<Form />} />
+        <Route path="/joincourse" element={<JoinCourse />} />
         <Route path="/course/detailcourse/:param" element={<DetailKelas />} />
         <Route
           path="/article/detailarticle/:param"
           element={<DetailArticle />}
         />
-
         {/* ========= Sidebar ========= */}
         <Route path="/account/dashboard" element={<Dashboard />} />
         <Route path="/account/mycourse" element={<MyCourse />} />
@@ -44,9 +46,9 @@ const Router = () => {
         <Route path="/account/profile" element={<Profile />} />
         <Route path="/account/award" element={<Award />} />
         <Route path="/account/detailprofile" element={<DetailProfile />} />
-
         {/* ====== 404 NotFound ======= */}
         <Route path="*" element={<NotFound />} />
+        <Route path="underdestruction" element={<UnderDestruction />} />
       </Routes>
     </>
   );

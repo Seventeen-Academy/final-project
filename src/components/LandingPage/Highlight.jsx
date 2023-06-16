@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom/dist";
 import "../../assets/css/style-landing.css";
 
 const Highlight = () => {
@@ -11,12 +12,13 @@ const Highlight = () => {
               Menghadirkan pembelajaran yang menyenangkan dengan dikemas tema
               game RPG.
             </p>
-            <button
+            <Link
+              to="/course"
               className="btn bgr-alternative color-light my-2 ms-3"
               id="btn-highlight"
             >
               Mulai Belajar
-            </button>
+            </Link>
             <img
               src="https://i.ibb.co/Sv11b49/scroll.png"
               className="bg-scroll"
