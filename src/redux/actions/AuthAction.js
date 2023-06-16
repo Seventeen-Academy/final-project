@@ -41,8 +41,6 @@ export const AuthRegister = (datas) => {
         text: "Ayo Login dan Selamat berpetualang, pahlawan!",
         icon: "success",
         confirmButtonText: "OK",
-      }).then(function () {
-        window.location.href = "/sign-in";
       });
     })
     .catch((error) => {
